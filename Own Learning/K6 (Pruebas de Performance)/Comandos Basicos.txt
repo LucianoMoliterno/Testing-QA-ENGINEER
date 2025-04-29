@@ -1,0 +1,21 @@
+k6 run Test.js
+k6 run Test.js --vus 10 --duration 30s (cant de usarios 10 en 30 segundos)
+control + c (se cancela la prueba)
+k6 run Test.js -i 3 (ejecuta la prueba 3 veces)
+k6 run .\Variables.js -e DOMAIN=test.k6.io
+
+
+                        -----------RESPUESTAS K6-------------
+Conjunto de Metricas:
+http_req_blocked = tiempo de solicitudes http pasaron bloqueadas antes de ser ejecutadas
+http_req_connecting = tiempo promedio de solicitudes pasaron conectandose al servidor
+http_req_duration = cuanto tiempo tomo ejecutar cada solicitud y recibir una respuesta
+....failed = porcentaje de fallas durante la prueba
+....receiving = tiempo promedio que las solicitudes pasaron recibiendo datos del servidor
+...sending = tiempo promedio que las solicitudes pasaron enviando datos al servidor
+...waiting = tiempo promedio que las solicitudes pasaron esperando una respuesta del servidor despues de ser enviados
+http_reqs = numero total de solicitudes realizadas durante la prueba
+iteration_duration = duracion promedio de cada iteracion (cada vez que se ejecute el escenario - codigo)
+iterations = cantidad de veces que ejecuta x peticion
+vus =  cantidad de usuarios virtuales
+vus_max = cantidad maxima de usuarios virtuales
