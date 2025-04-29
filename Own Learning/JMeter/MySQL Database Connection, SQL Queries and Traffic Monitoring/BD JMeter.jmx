@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Plan de Pruebas">
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables definidas por el Usuario">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath">C:\Users\Medraut\Desktop\Acceso Directo\Programacion\apache-jmeter-5.6.3\bin\mysql-connector-j-9.0.0</stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Grupo de Hilos">
+        <intProp name="ThreadGroup.num_threads">1000</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador Bucle">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="Configuración de la Conexión JDBC">
+          <boolProp name="autocommit">true</boolProp>
+          <stringProp name="checkQuery"></stringProp>
+          <stringProp name="connectionAge">5000</stringProp>
+          <stringProp name="connectionProperties"></stringProp>
+          <stringProp name="dataSource">ConexionSQL</stringProp>
+          <stringProp name="dbUrl">jdbc:mysql://localhost:3306/personas</stringProp>
+          <stringProp name="driver">com.mysql.jdbc.Driver</stringProp>
+          <stringProp name="initQuery"></stringProp>
+          <boolProp name="keepAlive">true</boolProp>
+          <stringProp name="password"></stringProp>
+          <stringProp name="poolMax">0</stringProp>
+          <boolProp name="preinit">false</boolProp>
+          <stringProp name="timeout">10000</stringProp>
+          <stringProp name="transactionIsolation">DEFAULT</stringProp>
+          <stringProp name="trimInterval">60000</stringProp>
+          <stringProp name="username">root</stringProp>
+        </JDBCDataSource>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Petición JDBC 1">
+          <stringProp name="dataSource">ConexionSQL</stringProp>
+          <stringProp name="query">SELECT * FROM clientes;</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Petición JDBC 2">
+          <stringProp name="dataSource">ConexionSQL</stringProp>
+          <stringProp name="query">SELECT name FROM clientes WHERE name LIKE &apos;L%&apos;;</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Petición JDBC 3">
+          <stringProp name="dataSource">ConexionSQL</stringProp>
+          <stringProp name="query">INSERT INTO personas.clientes (name, Father_Surname, Mother_Surname, User, Password) VALUES
+(&apos;Laura&apos;, &apos;Pérez&apos;, &apos;Fernández&apos;, &apos;LaPéFe&apos;, &apos;LaPéFe2024&apos;),
+(&apos;Javier&apos;, &apos;García&apos;, &apos;López&apos;, &apos;JaGaLó&apos;, &apos;JaGaLó2024&apos;),
+(&apos;María&apos;, &apos;Díaz&apos;, &apos;Gutiérrez&apos;, &apos;MaDíGu&apos;, &apos;MaDíGu2024&apos;),
+(&apos;Pedro&apos;, &apos;Martín&apos;, &apos;Sánchez&apos;, &apos;PeMaSa&apos;, &apos;PeMaSa2024&apos;),
+(&apos;Elena&apos;, &apos;Fernández&apos;, &apos;Pérez&apos;, &apos;ElFePé&apos;, &apos;ElFePé2024&apos;),
+(&apos;Juan&apos;, &apos;Ruiz&apos;, &apos;García&apos;, &apos;JuRuGa&apos;, &apos;JuRuGa2024&apos;),
+(&apos;Carmen&apos;, &apos;González&apos;, &apos;Rodríguez&apos;, &apos;CaGoRo&apos;, &apos;CaGoRo2024&apos;),
+(&apos;Francisco&apos;, &apos;López&apos;, &apos;Martínez&apos;, &apos;FrLóMa&apos;, &apos;FrLóMa2024&apos;),
+(&apos;Raquel&apos;, &apos;Hernández&apos;, &apos;Fernández&apos;, &apos;RaHeFe&apos;, &apos;RaHeFe2024&apos;),
+(&apos;Pablo&apos;, &apos;Gómez&apos;, &apos;Sánchez&apos;, &apos;PaGóSa&apos;, &apos;PaGóSa2024&apos;),
+(&apos;Marta&apos;, &apos;Jiménez&apos;, &apos;Pérez&apos;, &apos;MaJimPé&apos;, &apos;MaJimPé2024&apos;),
+(&apos;David&apos;, &apos;Sánchez&apos;, &apos;Gómez&apos;, &apos;DaSaGó&apos;, &apos;DaSaGó2024&apos;),
+(&apos;Eva&apos;, &apos;Pérez&apos;, &apos;Martínez&apos;, &apos;EvPéMa&apos;, &apos;EvPéMa2024&apos;),
+(&apos;José&apos;, &apos;Fernández&apos;, &apos;García&apos;, &apos;JoFeGa&apos;, &apos;JoFeGa2024&apos;),
+(&apos;Sofía&apos;, &apos;Gutiérrez&apos;, &apos;López&apos;, &apos;SoGuLó&apos;, &apos;SoGuLó2024&apos;),
+(&apos;Alberto&apos;, &apos;Gómez&apos;, &apos;Hernández&apos;, &apos;AlGóHe&apos;, &apos;AlGóHe2024&apos;),
+(&apos;Lucía&apos;, &apos;Martínez&apos;, &apos;Rodríguez&apos;, &apos;LuMaRo&apos;, &apos;LuMaRo2024&apos;);</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Petición JDBC 4">
+          <stringProp name="dataSource">ConexionSQL</stringProp>
+          <stringProp name="query">DELETE FROM personas.clientes WHERE id = &apos;18&apos;;</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Update Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árbol de Resultados">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="Ver Resultados en Árbol">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
