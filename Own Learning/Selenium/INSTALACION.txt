@@ -1,0 +1,28 @@
+1. en mi caso uso FIREFOX (https://github.com/mozilla/geckodriver/releases - la ultima version es suficiente)
+2. agregarla al PATH de variables del sistema en editar valores (en mi caso D:\DRIVERS)
+3. confirmar por cmd (geckodriver --version)
+4. la ruta en codigo debe estar el geckodriver.exe
+5. usar el codigo base de Selenium (proyecto en Intellij IDEA)
+
+si algo no funciona hay que crear el pom.xml con las siguientes lineas:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>Selenium</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>4.16.1</version>
+        </dependency>
+    </dependencies>
+</project>
+
+6. para finalizar sincronizas este pom al proyecto y al compilar deberia abrirse google en el navegador sin problemas.

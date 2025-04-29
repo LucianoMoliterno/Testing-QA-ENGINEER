@@ -1,0 +1,19 @@
+1. new proyect
+2. default todo (colocar nombre al proyecto)
+3.file -- proyect structure -- dependencies -- add -- buscar el selenium-server-version.jar y aplicar
+4. codigo base:
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Main {
+    public static void main(String[] args) {
+        //Configurar la ruta del firefoxdriver (gecko)
+        System.setProperty("webdriver.gecko.driver", "D:\\DRIVERS\\geckodriver.exe");
+
+        //Crear instancia
+        WebDriver driver = new FirefoxDriver();
+
+        
+    }
+}
