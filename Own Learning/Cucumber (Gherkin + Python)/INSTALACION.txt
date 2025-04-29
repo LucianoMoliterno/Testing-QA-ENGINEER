@@ -1,0 +1,20 @@
+TODO EN CMD:
+instalar python (python --version) 
+pip install behave
+en el directorio donde crearas el proyecto (carpeta) -- mkdir mi_proyecto_behave
+cd C:\Users\Medraut\Desktop\TESTER QA\Cucumber (Gherkin + Python)\mi_proyecto_behave
+behave --version
+PASO IMPORTANTE:
+agregar al PATH del sistema (pc) python y behave
+mkdir python / mkdir behave (las direcciones agregarlas individualmente sin pythonx.x.x y el behave)
+SIGUIENTE:
+C:\Users\Medraut\Desktop\TESTER QA\Cucumber (Gherkin + Python)\mi_proyecto_behave mkdir features
+creamos un example.feature 
+RUTA PARA EJECUTAR:
+cd C:\Users\Medraut\Desktop\TESTER QA\Cucumber (Gherkin + Python)\mi_proyecto_behave\features (ejemplo)
+behave -- ejecuta
+behave --tags=@calculadora -- ejecuta tag especifico
+SIGUIENTE:
+crear carpeta steps dentro de features
+y ejecutar behave
+
