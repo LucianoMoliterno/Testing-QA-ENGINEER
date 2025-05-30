@@ -1,0 +1,230 @@
+v2.id,title,description,preconditions,postconditions,tags,priority,severity,type,behavior,automation,status,is_flaky,layer,steps_type,steps_actions,steps_result,steps_data,milestone_id,milestone,suite_id,suite_parent_id,suite,suite_without_cases,parameters,is_muted
+,,,,,,,,,,,,,,,,,,,,1,,"HDU-01: Configuración de Alertas por Movimiento",1
+,,,,,,,,,,,,,,,,,,,,6,1,"Configuración de Alertas",1
+,,,,,,,,,,,,,,,,,,,,2,,"HDU-02: Solicitud de Tarjeta de Crédito desde la App",1
+,,,,,,,,,,,,,,,,,,,,7,2,"Solicitud de Tarjeta",1
+,,,,,,,,,,,,,,,,,,,,3,,"HDU-03: Cotización de Seguro de Auto",1
+,,,,,,,,,,,,,,,,,,,,8,3,Cotización,1
+,,,,,,,,,,,,,,,,,,,,4,,"HDU-04: Reporte de Siniestro desde la App",1
+,,,,,,,,,,,,,,,,,,,,9,4,"Reporte Siniestro",1
+,,,,,,,,,,,,,,,,,,,,5,,"HDU-05 Visualización de Póliza de Seguro",1
+,,,,,,,,,,,,,,,,,,,,10,5,Poliza,1
+1,"Acceder a configuración de alertas","Este caso de prueba valida la funcionalidad descrita en **HDU-01: Configuración de Alertas por Movimiento** .
+El usuario debe poder acceder a la configuración de alertas desde ""Seguridad y notificaciones"" y verificar que se muestren todas las opciones disponibles.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Usuario autenticado con cuenta verificada","El usuario permanece autenticado y la configuración se almacena temporalmente.","Windows 11,Opera GX,Firefox",high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Iniciar sesi\u00f3n en la plataforma""
+2. ""Navegar a Men\u00fa > Seguridad y Notificaciones""
+3. ""Hacer clic en Configurar Alertas""
+4. ""Verificar elementos visibles: secci\u00f3n de tipos de alertas, canales (SMS\/Email), y umbral m\u00ednimo.""
+","1. ""El sistema muestra la interfaz de configuraci\u00f3n con todos los campos y opciones disponibles.""
+2. """"
+3. """"
+4. ""Los canales de notificaci\u00f3n (SMS\/Email) est\u00e1n disponibles solo si los datos del usuario est\u00e1n verificados.""
+","1. ""Credenciales v\u00e1lidas""
+2. """"
+3. """"
+4. """"
+",,,1,,"HDU-01: Configuración de Alertas por Movimiento",,"Requerimiento Asociado:RF-01
+Casos de Prueba Relacionados:CP-02: Configurar alerta por transferencia vía SMS
+Casos de Prueba Relacionados:CP-03: Configurar umbral mínimo de $10.000",no
+2,"Configurar alerta por transferencia vía SMS","Este caso de prueba valida la funcionalidad descrita en **HDU-01: Configuración de Alertas por Movimiento** .
+El usuario debe poder configurar alertas específicas para transferencias vía SMS.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Número de teléfono verificado en el perfil.","La alerta queda activa y se notifica al usuario en tiempo real.","Firefox,Windows 11,Opera GX",medium,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Acceder a Configurar Alertas (CP-01)""
+2. ""Hacer clic en Agregar Alerta""
+3. ""Seleccionar Transferencia como tipo y SMS como canal""
+4. ""Guardar configuraci\u00f3n""
+5. ""Simular una transferencia desde otra cuenta""
+","1. """"
+2. """"
+3. """"
+4. """"
+5. ""El sistema env\u00eda un SMS al n\u00famero registrado y registra la alerta en la base de datos.""
+","1. """"
+2. """"
+3. ""Tipo: Transferencia; Canal: SMS""
+4. """"
+5. """"
+",,,1,,"HDU-01: Configuración de Alertas por Movimiento",,"Requerimiento Asociado:RF-02
+Casos de Prueba Relacionados:CP-01: Acceder a configuración de alertas
+Casos de Prueba Relacionados:CP-03: Configurar umbral mínimo de $10.000",no
+5,"Configurar umbral mínimo de $10.000","Este caso de prueba valida la funcionalidad descrita en **HDU-01: Configuración de Alertas por Movimiento** .
+El usuario debe poder configurar un umbral mínimo de $10.000 para recibir alertas cuando el saldo baje por debajo de ese valor.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Usuario autenticado","El umbral se almacena permanentemente en la cuenta del usuario.","Firefox,Windows 11,Opera GX",medium,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Hacer clic en Configurar Umbral M\u00ednimo""
+2. ""Hacer clic en Configurar Umbral M\u00ednimo""
+3. ""Ingresar $10.000 y guardar""
+4. ""Simular una transacci\u00f3n que reduzca el saldo por debajo del umbral""
+","1. """"
+2. """"
+3. ""El umbral se almacena permanentemente en la cuenta del usuario.""
+4. ""El sistema muestra una notificaci\u00f3n emergente y env\u00eda un mensaje al canal seleccionado (SMS\/Email).""
+","1. """"
+2. """"
+3. ""Umbral: $10.000""
+4. """"
+",,,1,,"HDU-01: Configuración de Alertas por Movimiento",,"Requerimiento Asociado:RF-03
+Casos Relacionados::CP-01: Acceder a configuración de alertas
+Casos Relacionados::CP-02: Configurar alerta por transferencia vía SMS",no
+6,"Acceder al formulario de solicitud de tarjeta","Este caso de prueba valida la funcionalidad descrita en **HDU-02: Solicitud de Tarjeta de Crédito desde la App** .
+El usuario debe poder acceder al formulario de solicitud de tarjeta desde la sección de productos financieros.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Usuario autenticado","El usuario puede iniciar el llenado del formulario.","Firefox,Opera GX,Windows 11",high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Navegar a Productos Financieros > Tarjetas de Cr\u00e9dito""
+2. ""Hacer clic en Solicitar Tarjeta""
+3. ""Verificar campos del formulario: datos personales, financieros y documentaci\u00f3n requerida.""
+","1. """"
+2. ""El usuario puede iniciar el llenado del formulario.""
+3. ""El sistema carga el formulario con todos los campos obligatorios marcados (\\*).""
+","1. ""Producto: Tarjeta de cr\u00e9dito""
+2. """"
+3. """"
+",,,2,,"HDU-02: Solicitud de Tarjeta de Crédito desde la App",,"Requerimiento Asociado:RF-04
+Casos Relacionados::CP-05: Enviar solicitud válida de tarjeta",no
+7,"Enviar solicitud válida de tarjeta","Este caso de prueba valida la funcionalidad descrita en **HDU-02: Solicitud de Tarjeta de Crédito desde la App** .
+El usuario debe poder enviar una solicitud válida de tarjeta después de completar el formulario.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Todos los campos del Formulario completos","La solicitud se almacena en Mis Solicitudes con estado ""Pendiente"".","Firefox,Opera GX,Windows 11",high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Completar todos los campos del formulario (CP-04)""
+2. ""Hacer clic en Enviar Solicitud""
+3. ""Verificar pantalla de confirmaci\u00f3n""
+","1. """"
+2. ""La solicitud se almacena en Mis Solicitudes con estado \""Pendiente\"".""
+3. ""El sistema muestra un mensaje: \""Solicitud enviada. Recibir\u00e1s un correo con el estado en 3-5 d\u00edas h\u00e1biles.\""""
+","1. ""Datos personales y financieros v\u00e1lidos""
+2. """"
+3. """"
+",,,2,,"HDU-02: Solicitud de Tarjeta de Crédito desde la App",,"Requerimiento Asociado:RF-05
+Casos Relacionados:CP-04: Acceder al formulario de solicitud de tarjeta
+Casos Relacionados:CP-06: Consultar estado de solicitud de tarjeta",no
+8,"Consultar estado de solicitud de tarjeta","Este caso de prueba valida la funcionalidad descrita en **HDU-02: Solicitud de Tarjeta de Crédito desde la App** .
+El usuario debe poder consultar el estado de su solicitud desde la sección de seguimiento.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Solicitud previamente enviada","No se modifica el estado de la solicitud.","Firefox,Opera GX,Windows 11",medium,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Navegar a Mis Solicitudes""
+2. ""Seleccionar la solicitud de tarjeta""
+3. ""Hacer clic en Ver Detalles""
+","1. """"
+2. """"
+3. ""El sistema muestra el estado actual (\""En Revisi\u00f3n\"", \""Aprobada\"", o \""Rechazada\"") y fecha de actualizaci\u00f3n.""
+","1. """"
+2. """"
+3. """"
+",,,2,,"HDU-02: Solicitud de Tarjeta de Crédito desde la App",,"Requerimiento Asociado:RF-06
+Casos Relacionados:CP-05: Enviar solicitud válida de tarjeta",no
+9,"Generar cotización de seguro vehicular","Este caso de prueba valida la funcionalidad descrita en **HDU-03: Cotización de Seguro de Auto** .
+El usuario debe poder generar una cotización ingresando datos del vehículo y personales.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Usuario autenticado","Las cotizaciones se almacenan en Mis Cotizaciones.","Firefox,Opera GX,Windows 11",high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Navegar a Seguros > Cotizar Auto""
+2. ""Ingresar datos del veh\u00edculo y personales""
+3. ""Hacer clic en Generar Cotizaci\u00f3n""
+","1. """"
+2. """"
+3. ""El sistema muestra tres planes con precios, coberturas y exclusiones detalladas.""
+","1. """"
+2. ""Datos del veh\u00edculo (placa, modelo, a\u00f1o) y datos personales""
+3. """"
+",,,3,,"HDU-03: Cotización de Seguro de Auto",,"Requerimiento Asociado:RF-07
+Casos Relacionados:CP-08: Comparar tres planes de seguro
+Casos Relacionados:CP-09: Guardar cotización de seguro",no
+10,"Comparar tres planes de seguro","Este caso de prueba valida la funcionalidad descrita en **HDU-03: Cotización de Seguro de Auto** .
+El usuario debe poder comparar hasta tres planes de seguro simultáneamente.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Tres planes cotizados","El usuario puede elegir un plan desde la comparación.","Firefox,Windows 11,Opera GX",medium,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Acceder a Cotizar Auto (CP-07)""
+2. ""Seleccionar tres planes""
+3. ""Hacer clic en Comparar""
+","1. """"
+2. """"
+3. ""El sistema muestra una tabla comparativa con coberturas, precios y beneficios destacados.""
+","1. """"
+2. ""Planes seleccionados: B\u00e1sico, Est\u00e1ndar, Premium""
+3. """"
+",,,3,,"HDU-03: Cotización de Seguro de Auto",,"Requerimiento Asociado:RF-08
+Casos Relacionados:CP-07: Generar cotización de seguro vehicular
+Casos Relacionados:CP-09: Guardar cotización de seguro",no
+11,"Guardar cotización de seguro","Este caso de prueba valida la funcionalidad descrita en **HDU-03: Cotización de Seguro de Auto** .
+El usuario debe poder guardar la cotización en su perfil o reenviarla a su correo electrónico.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Cotización activa","La cotización guardada es accesible para futuras referencias.",,medium,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Acceder a una cotizaci\u00f3n generada""
+2. ""Hacer clic en Guardar""
+3. ""Ingresar un alias y confirmar""
+","1. """"
+2. """"
+3. ""La cotizaci\u00f3n aparece en Mis Cotizaciones con el alias asignado.""
+","1. ""Nombre de cotizaci\u00f3n: \""Cotizaci\u00f3n_2023\""""
+2. """"
+3. """"
+",,,3,,"HDU-03: Cotización de Seguro de Auto",,"Requerimiento Asociado:RF-09
+Casos Relacionados:CP-07: Generar cotización de seguro vehicular
+Casos Relacionados:CP-08: Comparar tres planes de seguro",no
+12,"Reportar siniestro desde la app móvil","Este caso de prueba valida la funcionalidad descrita en **HDU-04: Reporte de Siniestro desde la App** .
+El usuario debe poder reportar un siniestro desde la aplicación móvil.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Usuario con póliza activa","El siniestro queda en estado ""Pendiente de Revisión"".",,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Navegar a Siniestros > Reportar""
+2. ""Ingresar detalles del evento (fecha, ubicaci\u00f3n, fotos)""
+3. ""Hacer clic en Enviar Reporte""
+","1. """"
+2. """"
+3. ""El sistema asigna un n\u00famero de expediente y muestra mensaje: \""Siniestro reportado. Un agente se contactar\u00e1 contigo en 24 horas.\""""
+","1. """"
+2. ""Datos del siniestro: ubicaci\u00f3n, fotos, descripci\u00f3n""
+3. """"
+",,,4,,"HDU-04: Reporte de Siniestro desde la App",,"Requerimiento Asociado:RF-10
+Casos Relacionados:CP-11: Adjuntar evidencia a siniestro
+Casos Relacionados:CP-12: Consultar estado de siniestro",no
+13,"Adjuntar evidencia a siniestro","Este caso de prueba valida la funcionalidad descrita en **HDU-04: Reporte de Siniestro desde la App** .
+El usuario debe poder adjuntar evidencia (fotos, ubicación) a un siniestro reportado.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Permisos de carga habilitados","La evidencia se asocia al expediente del siniestro.","Firefox,Opera GX,Windows 11",medium,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Acceder al siniestro reportado (CP-10)""
+2. ""Hacer clic en Agregar Evidencia""
+3. ""Subir im\u00e1genes y confirmar ubicaci\u00f3n""
+4. ""Guardar cambios""
+","1. """"
+2. """"
+3. """"
+4. ""El sistema muestra las fotos adjuntas y la ubicaci\u00f3n en un mapa.""
+","1. """"
+2. """"
+3. ""Fotos del da\u00f1o, ubicaci\u00f3n geogr\u00e1fica""
+4. """"
+",,,4,,"HDU-04: Reporte de Siniestro desde la App",,"Requerimiento Asociado:RF-11
+Casos Relacionados:CP-10: Reportar siniestro desde la app móvil",no
+14,"Consultar estado de siniestro","Este caso de prueba valida la funcionalidad descrita en **HDU-04: Reporte de Siniestro desde la App** .
+El usuario debe poder consultar el estado de su siniestro desde la sección de seguimiento de casos.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Siniestro reportado","No se modifica el estado del siniestro.","Firefox,Opera GX,Windows 11",medium,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Navegar a Mis Siniestros""
+2. ""Seleccionar un siniestro""
+3. ""Hacer clic en Ver Estado""
+","1. """"
+2. """"
+3. ""El sistema muestra el estado actual (\""En Revisi\u00f3n\"", \""Aprobado\"", \""Rechazado\"") y comentarios del agente.""
+","1. """"
+2. """"
+3. """"
+",,,4,,"HDU-04: Reporte de Siniestro desde la App",,"Requerimiento Asociado:RF-12
+Casos Relacionados:CP-10: Reportar siniestro desde la app móvil",no
+15,"Visualizar detalle de póliza activa","Este caso de prueba valida la funcionalidad descrita en **HDU-05: Visualización de Póliza de Seguro** .
+El usuario debe poder consultar el detalle de su póliza desde la plataforma en línea.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Usuario con seguro vigente","El usuario puede descargar el contrato PDF.","Firefox,Opera GX,Windows 11",high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Navegar a Mis P\u00f3lizas""
+2. ""Seleccionar una p\u00f3liza activa""
+3. ""Hacer clic en Ver Detalle""
+","1. """"
+2. """"
+3. ""El sistema muestra coberturas, exclusiones, fechas de vigencia y t\u00e9rminos legales.""
+","1. """"
+2. ""N\u00famero de p\u00f3liza""
+3. """"
+",,,5,,"HDU-05 Visualización de Póliza de Seguro",,"Requerimiento Asociado:RF-13
+Casos Relacionados:CP-14: Descargar contrato de póliza en PDF
+Casos Relacionados:CP-15: Recibir notificación de vencimiento de póliza",no
+16,"Descargar contrato de póliza en PDF","Este caso de prueba valida la funcionalidad descrita en **HDU-05: Visualización de Póliza de Seguro** .
+El usuario debe poder descargar una copia completa del contrato en formato PDF.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Póliza activa disponible","El archivo queda almacenado localmente.","Firefox,Opera GX,Windows 11",medium,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Acceder al detalle de la p\u00f3liza (CP-13)""
+2. ""Hacer clic en Descargar Contrato""
+3. ""Guardar el archivo en el dispositivo""
+","1. """"
+2. """"
+3. ""El sistema genera un archivo PDF con el contrato firmado y lo descarga en el dispositivo.""
+","1. """"
+2. """"
+3. ""Archivo PDF""
+",,,5,,"HDU-05 Visualización de Póliza de Seguro",,"Requerimiento Asociado:RF-14
+Casos Relacionados:CP-13: Visualizar detalle de póliza activa",no
+17,"Recibir notificación de vencimiento de póliza","Este caso de prueba valida la funcionalidad descrita en **HDU-05: Visualización de Póliza de Seguro** .
+El usuario debe recibir notificaciones automáticas relacionadas con la vigencia y renovación de la póliza.
+NOTA: Este caso está documentado pero no se ha podido validar en el sistema real. Pendiente de verificación una vez que el entorno de prueba esté disponible.","Notificaciones push activadas","El usuario es notificado del vencimiento sin alterar datos internos.","Firefox,Opera GX,Windows 11",low,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. ""Configurar una p\u00f3liza con vencimiento en 7 d\u00edas""
+2. ""Esperar notificaci\u00f3n autom\u00e1tica""
+3. ""Verificar bandeja de notificaciones""
+","1. """"
+2. """"
+3. ""El sistema muestra una alerta: \""Tu p\u00f3liza [n\u00famero] vence en 7 d\u00edas. Renueva ahora.\""""
+","1. """"
+2. """"
+3. """"
+",,,5,,"HDU-05 Visualización de Póliza de Seguro",,"Requerimiento Asociado:RF-15
+Casos Relacionados:CP-13: Visualizar detalle de póliza activa",no
