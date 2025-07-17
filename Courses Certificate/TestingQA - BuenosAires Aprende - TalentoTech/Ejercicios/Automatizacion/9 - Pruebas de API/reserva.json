@@ -1,0 +1,19 @@
+{
+  "cliente": {
+    "nombre": "string",
+    "telefono": "string",
+    "email": "string"
+  },
+  "reserva": [
+    {
+      "numero": "number",
+      "tipo": "string",
+      "precio_por_noche": "number"
+    }
+  ],
+  "duracion_estancia": {
+    "fecha_entrada": "string (fecha en formato YYYY-MM-DD)",
+    "fecha_salida": "string (fecha en formato YYYY-MM-DD)"
+  },
+  "total": "number"
+}
