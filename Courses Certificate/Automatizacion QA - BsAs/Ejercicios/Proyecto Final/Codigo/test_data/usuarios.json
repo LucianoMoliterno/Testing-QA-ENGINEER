@@ -1,0 +1,27 @@
+{
+  "usuarios_validos": [
+    {
+      "nombre": "Carlos Mendez",
+      "email": "carlos.mendez@talentolab.com",
+      "mensaje": "Busco oportunidades como editor de video"
+    },
+    {
+      "nombre": "Ana Rodriguez",
+      "email": "ana.rodriguez@example.com",
+      "mensaje": "Interesada en consultoría IT"
+    }
+  ],
+  "usuarios_invalidos": [
+    {
+      "nombre": "",
+      "email": "invalido@test.com",
+      "mensaje": "Test con nombre vacío"
+    },
+    {
+      "nombre": "Test User",
+      "email": "email_invalido",
+      "mensaje": "Test con email sin formato"
+    }
+  ]
+}
+

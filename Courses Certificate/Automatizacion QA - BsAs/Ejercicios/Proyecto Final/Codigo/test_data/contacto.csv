@@ -1,0 +1,7 @@
+nombre,email,mensaje,esperado
+Carlos Mendez,carlos@test.com,¿Cómo es el proceso de selección?,exito
+Ana Lopez,ana@test.com,Necesito información sobre servicios,exito
+,vacio@test.com,Test campo nombre vacío,error
+Test User,emailinvalido,Test email sin formato,error
+Pedro Gomez,pedro@test.com,Consulta sobre reclutamiento IT,exito
+

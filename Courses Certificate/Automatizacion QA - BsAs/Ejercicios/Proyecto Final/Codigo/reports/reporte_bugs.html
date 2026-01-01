@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Bugs - Talento Lab | Luciano Moliterno</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .info-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 5px;
+        }
+
+        .bug-card {
+            background: white;
+            border-left: 5px solid #e74c3c;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .bug-card:hover {
+            transform: translateX(5px);
+        }
+
+        .bug-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .bug-id {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .severity {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .severity-alta {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .severity-media {
+            background: #f39c12;
+            color: white;
+        }
+
+        .bug-title {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .bug-section {
+            margin: 10px 0;
+        }
+
+        .bug-section strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .steps {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .steps ol {
+            margin-left: 20px;
+        }
+
+        .steps li {
+            margin: 5px 0;
+        }
+
+        .test-reference {
+            background: #e8f4f8;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            border-left: 3px solid #3498db;
+        }
+
+        .test-reference code {
+            background: #fff;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e74c3c;
+        }
+
+        .summary {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            margin-top: 40px;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .bug-card {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> Reporte de Bugs Detectados</h1>
+            <p>Plataforma: Talento Lab | Alumno: Luciano Moliterno</p>
+            <p>Fecha: 22 de Noviembre 2025</p>
+        </header>
+
+        <div class="info-box">
+            <h3> Información del Proyecto</h3>
+            <p><strong>URL de Prueba:</strong> <a href="https://talentolab-test.netlify.app" target="_blank">https://talentolab-test.netlify.app</a></p>
+            <p><strong>Método de Detección:</strong> Testing Manual + Automatización con Selenium WebDriver</p>
+            <p><strong>Alcance:</strong> Secciones Servicios, Nuestros Clientes, Contacto, Registro y Carga de CV</p>
+        </div>
+
+        <!-- BUG-001 -->
+        <div class="bug-card">
+            <div class="bug-header">
+                <span class="bug-id">BUG-001</span>
+                <span class="severity severity-alta">ALTA</span>
+            </div>
+            <h2 class="bug-title">Archivo > 5MB Aceptado sin Validación</h2>
+
+            <div class="bug-section">
+                <strong> Descripción:</strong>
+                <p>El sistema acepta archivos de CV que exceden el límite de 5MB sin mostrar mensaje de error ni rechazar la carga. Esto puede generar problemas de almacenamiento y rendimiento.</p>
+            </div>
+
+            <div class="bug-section">
+                <strong> Pasos para Reproducir:</strong>
+                <div class="steps">
+                    <ol>
+                        <li>Ingresar a https://talentolab-test.netlify.app</li>
+                        <li>Hacer clic en "Registrate"</li>
+                        <li>Hacer clic en el campo de carga de CV</li>
+                        <li>Seleccionar un archivo > 5MB (ej: 6MB)</li>
+                        <li>Intentar enviar el formulario</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="bug-section">
+                <strong> Resultado Esperado:</strong>
+                <p>El sistema debe rechazar el archivo y mostrar mensaje: "El archivo excede el límite de 5MB"</p>
+            </div>
+
+            <div class="bug-section">
+                <strong> Resultado Obtenido:</strong>
+                <p>El archivo es aceptado sin validación ni mensaje de error</p>
+            </div>
+
+            <div class="test-reference">
+                <strong> Test Case Automatizado:</strong> <code>test_tc009_carga_cv_limite_peso</code><br>
+                <strong> Archivo:</strong> tests/test_carga_cv.py
+            </div>
+        </div>
+
+        <!-- BUG-002 -->
+        <div class="bug-card">
+            <div class="bug-header">
+                <span class="bug-id">BUG-002</span>
+                <span class="severity severity-media">MEDIA</span>
+            </div>
+            <h2 class="bug-title">Menú Hamburguesa No Responde en Móvil</h2>
+
+            <div class="bug-section">
+                <strong> Descripción:</strong>
+                <p>En dispositivos móviles (resolución 2400x1080), el menú hamburguesa no responde al primer toque, requiere recarga de página. Además, el botón "Carga tu CV" presenta problemas visuales de espaciado.</p>
+            </div>
+
+            <div class="bug-section">
+                <strong> Pasos para Reproducir:</strong>
+                <div class="steps">
+                    <ol>
+                        <li>Abrir la web desde un dispositivo Android (2400x1080)</li>
+                        <li>Tocar el menú hamburguesa</li>
+                        <li>Observar que no se despliega</li>
+                        <li>Recargar la página</li>
+                        <li>Observar el botón "Carga tu CV"</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="bug-section">
+                <strong> Resultado Esperado:</strong>
+                <p>El menú debe desplegarse al primer toque y todos los botones deben mantener espaciado correcto</p>
+            </div>
+
+            <div class="bug-section">
+                <strong> Resultado Obtenido:</strong>
+                <p>Menú no responde; requiere recarga. Botón "Carga tu CV" con espaciado incorrecto en móvil</p>
+            </div>
+
+            <div class="test-reference">
+                <strong> Test Case Automatizado:</strong> <code>test_tc010_navegacion_mobile</code><br>
+                <strong> Archivo:</strong> tests/test_responsive.py
+            </div>
+        </div>
+
+        <!-- BUG-003 -->
+        <div class="bug-card">
+            <div class="bug-header">
+                <span class="bug-id">BUG-003</span>
+                <span class="severity severity-alta">ALTA</span>
+            </div>
+            <h2 class="bug-title">Envío sin Validación de Campos Vacíos</h2>
+
+            <div class="bug-section">
+                <strong> Descripción:</strong>
+                <p>El formulario de contacto permite el envío sin validar que los campos obligatorios estén completos. No muestra advertencias ni bloquea el envío cuando los campos están vacíos.</p>
+            </div>
+
+            <div class="bug-section">
+                <strong> Pasos para Reproducir:</strong>
+                <div class="steps">
+                    <ol>
+                        <li>Ir a la sección "Contacto"</li>
+                        <li>Dejar todos los campos vacíos (nombre, email, mensaje)</li>
+                        <li>Hacer clic en el botón "Enviar"</li>
+                        <li>Observar comportamiento</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="bug-section">
+                <strong> Resultado Esperado:</strong>
+                <p>El formulario debe bloquear el envío y mostrar mensajes de validación en los campos obligatorios</p>
+            </div>
+
+            <div class="bug-section">
+                <strong> Resultado Obtenido:</strong>
+                <p>Los datos permanecen en el formulario sin validación ni mensaje de error</p>
+            </div>
+
+            <div class="test-reference">
+                <strong> Test Cases Automatizados:</strong>
+                <code>test_tc003_envio_formulario_exitoso</code>,
+                <code>test_tc004_formulario_campos_vacios</code><br>
+                <strong> Archivo:</strong> tests/test_contacto.py
+            </div>
+        </div>
+
+        <!-- BUG-004 -->
+        <div class="bug-card">
+            <div class="bug-header">
+                <span class="bug-id">BUG-004</span>
+                <span class="severity severity-alta">ALTA</span>
+            </div>
+            <h2 class="bug-title">Link "Carga tu CV" Devuelve 404</h2>
+
+            <div class="bug-section">
+                <strong> Descripción:</strong>
+                <p>El link del botón "Carga tu CV" en el menú principal redirige a una página que devuelve error 404 - Not Found. Esto impide que los candidatos puedan cargar su CV.</p>
+            </div>
+
+            <div class="bug-section">
+                <strong> Pasos para Reproducir:</strong>
+                <div class="steps">
+                    <ol>
+                        <li>Ingresar al sitio web</li>
+                        <li>Hacer clic en "Carga tu CV" en el header</li>
+                        <li>Observar la página resultante</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="bug-section">
+                <strong> Resultado Esperado:</strong>
+                <p>Redirección a formulario de carga de archivo o página de login funcional</p>
+            </div>
+
+            <div class="bug-section">
+                <strong> Resultado Obtenido:</strong>
+                <p>Página 404 - Not Found (https://talentolab-test.netlify.app/login no existe)</p>
+            </div>
+
+            <div class="test-reference">
+                <strong> Test Case Automatizado:</strong> <code>test_tc002_carga_cv_valido</code><br>
+                <strong> Archivo:</strong> tests/test_carga_cv.py<br>
+                <strong> Nota:</strong> Test documenta el error 404 actual
+            </div>
+        </div>
+
+        <!-- BUG-005 -->
+        <div class="bug-card">
+            <div class="bug-header">
+                <span class="bug-id">BUG-005</span>
+                <span class="severity severity-media">MEDIA</span>
+            </div>
+            <h2 class="bug-title">Archivo Corrupto No Validado</h2>
+
+            <div class="bug-section">
+                <strong> Descripción:</strong>
+                <p>El sistema no valida la integridad de los archivos cargados como CV. Acepta archivos corruptos o con formato inválido sin mostrar advertencia.</p>
+            </div>
+
+            <div class="bug-section">
+                <strong> Pasos para Reproducir:</strong>
+                <div class="steps">
+                    <ol>
+                        <li>Ir a la página de registro</li>
+                        <li>Completar los campos del formulario</li>
+                        <li>Seleccionar un archivo corrupto o inválido (.docx dañado)</li>
+                        <li>Intentar cargar el archivo</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="bug-section">
+                <strong> Resultado Esperado:</strong>
+                <p>Rechazo inmediato con mensaje: "El archivo está corrupto o tiene formato inválido"</p>
+            </div>
+
+            <div class="bug-section">
+                <strong> Resultado Obtenido:</strong>
+                <p>La plataforma procesa el CV corrupto sin mostrar advertencia ni bloqueo</p>
+            </div>
+
+            <div class="test-reference">
+                <strong> Test Case Automatizado:</strong> <code>test_tc008_carga_cv_corrupto</code><br>
+                <strong> Archivo:</strong> tests/test_carga_cv.py
+            </div>
+        </div>
+
+        <!-- RESUMEN -->
+        <div class="summary">
+            <h2 style="color: #667eea; margin-bottom: 20px;"> Resumen Ejecutivo</h2>
+
+            <div class="stats">
+                <div class="stat-card" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Bugs Detectados</span>
+                </div>
+
+                <div class="stat-card" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Severidad Alta</span>
+                </div>
+
+                <div class="stat-card" style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Severidad Media</span>
+                </div>
+
+                <div class="stat-card" style="background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);">
+                    <span class="stat-number">25</span>
+                    <span class="stat-label">Tests Automatizados</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color: #2c3e50; margin-bottom: 10px;"> Distribución de Severidad</h3>
+                <ul style="line-height: 2;">
+                    <li><strong>Alta (60%):</strong> BUG-001, BUG-003, BUG-004 - Impactan funcionalidad crítica</li>
+                    <li><strong>Media (40%):</strong> BUG-002, BUG-005 - Impactan experiencia de usuario</li>
+                    <li><strong>Baja (0%):</strong> No se detectaron bugs leves</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3 style="color: #2c3e50; margin-bottom: 10px;"> Recomendaciones</h3>
+                <ul style="line-height: 2;">
+                    <li><strong>Prioridad 1:</strong> Corregir BUG-004 (404 en Carga CV) - Bloquea funcionalidad principal</li>
+                    <li><strong>Prioridad 2:</strong> Implementar validaciones de formulario (BUG-003)</li>
+                    <li><strong>Prioridad 3:</strong> Agregar validación de tamaño de archivo (BUG-001)</li>
+                    <li><strong>Prioridad 4:</strong> Validar integridad de archivos (BUG-005)</li>
+                    <li><strong>Prioridad 5:</strong> Corregir menú móvil (BUG-002)</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 30px; padding: 20px; background: #e8f4f8; border-radius: 8px;">
+                <h3 style="color: #2c3e50; margin-bottom: 10px;"> Tests Automatizados</h3>
+                <p>Todos los bugs documentados cuentan con <strong>tests automatizados</strong> que los detectan y documentan:</p>
+                <ul style="line-height: 2; margin-top: 10px;">
+                    <li><code>tests/test_carga_cv.py</code> - 5 tests (BUG-001, BUG-004, BUG-005)</li>
+                    <li><code>tests/test_contacto.py</code> - 7 tests (BUG-003)</li>
+                    <li><code>tests/test_responsive.py</code> - 3 tests (BUG-002)</li>
+                </ul>
+                <p style="margin-top: 10px;"><strong>Ejecutar:</strong> <code>pytest tests/ -v --html=reports/report.html</code></p>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Framework de Automatización</strong> - Luciano Moliterno</p>
+            <p>Proyecto Final Testing QA | Talento Lab Platform</p>
+            <p>Generado: 22 de Noviembre 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
+

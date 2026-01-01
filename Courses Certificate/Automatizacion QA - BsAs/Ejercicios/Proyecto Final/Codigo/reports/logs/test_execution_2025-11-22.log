@@ -1,0 +1,810 @@
+2025-11-22 22:21:53 - tests.test_api - INFO - === Iniciando API Test 1: GET Lista de Usuarios ===
+2025-11-22 22:21:54 - tests.test_api - INFO - Endpoint: https://reqres.in/api/users?page=1
+2025-11-22 22:21:54 - tests.test_api - INFO - Status Code: 401
+2025-11-22 22:21:55 - tests.test_api - INFO - === Iniciando API Test 2: GET Usuario Individual ===
+2025-11-22 22:21:55 - tests.test_api - INFO - Endpoint: https://reqres.in/api/users/2
+2025-11-22 22:21:55 - tests.test_api - INFO - Status Code: 401
+2025-11-22 22:21:55 - tests.test_api - INFO - === Iniciando API Test 3: GET Usuario No Encontrado (NEGATIVO) ===
+2025-11-22 22:21:56 - tests.test_api - INFO - Endpoint: https://reqres.in/api/users/999
+2025-11-22 22:21:56 - tests.test_api - INFO - Status Code: 401
+2025-11-22 22:21:56 - tests.test_api - INFO - === Iniciando API Test 4: POST Crear Usuario ===
+2025-11-22 22:21:56 - tests.test_api - INFO - Endpoint: https://reqres.in/api/users
+2025-11-22 22:21:56 - tests.test_api - INFO - Datos enviados: {'name': 'Carlos Mendez', 'job': 'Editor de Video'}
+2025-11-22 22:21:56 - tests.test_api - INFO - Status Code: 401
+2025-11-22 22:21:56 - tests.test_api - INFO - === Iniciando API Test 5: DELETE Usuario ===
+2025-11-22 22:21:57 - tests.test_api - INFO - Endpoint: https://reqres.in/api/users/2
+2025-11-22 22:21:57 - tests.test_api - INFO - Status Code: 401
+2025-11-22 22:21:57 - tests.test_api - INFO - === Iniciando API Test 6: Encadenamiento POST + GET ===
+2025-11-22 22:21:57 - tests.test_api - INFO - Paso 1: Creando usuario...
+2025-11-22 22:23:15 - tests.test_api - INFO - === Iniciando API Test 1: GET Lista de Usuarios ===
+2025-11-22 22:23:15 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users
+2025-11-22 22:23:15 - tests.test_api - INFO - Status Code: 200
+2025-11-22 22:23:15 - tests.test_api - INFO - ✓ Test exitoso: 10 usuarios obtenidos
+2025-11-22 22:23:15 - tests.test_api - INFO - Primer usuario: Leanne Graham (Sincere@april.biz)
+2025-11-22 22:23:15 - tests.test_api - INFO - === Iniciando API Test 2: GET Usuario Individual ===
+2025-11-22 22:23:15 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users/1
+2025-11-22 22:23:15 - tests.test_api - INFO - Status Code: 200
+2025-11-22 22:23:15 - tests.test_api - INFO - ✓ Usuario obtenido: Leanne Graham
+2025-11-22 22:23:15 - tests.test_api - INFO - Email: Sincere@april.biz
+2025-11-22 22:23:15 - tests.test_api - INFO - === Iniciando API Test 3: GET Usuario No Encontrado (NEGATIVO) ===
+2025-11-22 22:23:16 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users/9999
+2025-11-22 22:23:16 - tests.test_api - INFO - Status Code: 404
+2025-11-22 22:23:16 - tests.test_api - INFO - ✓ Test exitoso: Usuario inexistente retorna 404 correctamente
+2025-11-22 22:23:16 - tests.test_api - INFO - === Iniciando API Test 4: POST Crear Post ===
+2025-11-22 22:23:16 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/posts
+2025-11-22 22:23:16 - tests.test_api - INFO - Datos enviados: {'title': 'Test Automation - Talento Lab', 'body': 'Este es un test de automatización para el proyecto final', 'userId': 1}
+2025-11-22 22:23:16 - tests.test_api - INFO - Status Code: 201
+2025-11-22 22:23:16 - tests.test_api - INFO - ✓ Post creado exitosamente con ID: 101
+2025-11-22 22:23:16 - tests.test_api - INFO - === Iniciando API Test 5: DELETE Post ===
+2025-11-22 22:23:16 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/posts/1
+2025-11-22 22:23:16 - tests.test_api - INFO - Status Code: 200
+2025-11-22 22:23:16 - tests.test_api - INFO - ✓ Post eliminado exitosamente
+2025-11-22 22:23:16 - tests.test_api - INFO - === Iniciando API Test 6: Encadenamiento POST + GET ===
+2025-11-22 22:23:16 - tests.test_api - INFO - Paso 1: Creando post...
+2025-11-22 22:23:16 - tests.test_api - INFO - ✓ Post creado con ID: 101
+2025-11-22 22:23:16 - tests.test_api - INFO - Paso 2: Obteniendo lista de posts...
+2025-11-22 22:23:17 - tests.test_api - INFO - ✓ Lista obtenida: 100 posts encontrados
+2025-11-22 22:23:17 - tests.test_api - INFO - ✓ Encadenamiento de peticiones exitoso
+2025-11-22 22:24:33 - tests.test_api - INFO - === Iniciando API Test 1: GET Lista de Usuarios ===
+2025-11-22 22:24:33 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users
+2025-11-22 22:24:33 - tests.test_api - INFO - Status Code: 200
+2025-11-22 22:24:33 - tests.test_api - INFO - ✓ Test exitoso: 10 usuarios obtenidos
+2025-11-22 22:24:33 - tests.test_api - INFO - Primer usuario: Leanne Graham (Sincere@april.biz)
+2025-11-22 22:24:33 - tests.test_api - INFO - === Iniciando API Test 2: GET Usuario Individual ===
+2025-11-22 22:24:33 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users/1
+2025-11-22 22:24:33 - tests.test_api - INFO - Status Code: 200
+2025-11-22 22:24:33 - tests.test_api - INFO - ✓ Usuario obtenido: Leanne Graham
+2025-11-22 22:24:33 - tests.test_api - INFO - Email: Sincere@april.biz
+2025-11-22 22:24:33 - tests.test_api - INFO - === Iniciando API Test 3: GET Usuario No Encontrado (NEGATIVO) ===
+2025-11-22 22:24:33 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users/9999
+2025-11-22 22:24:33 - tests.test_api - INFO - Status Code: 404
+2025-11-22 22:24:33 - tests.test_api - INFO - ✓ Test exitoso: Usuario inexistente retorna 404 correctamente
+2025-11-22 22:24:33 - tests.test_api - INFO - === Iniciando API Test 4: POST Crear Post ===
+2025-11-22 22:24:33 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/posts
+2025-11-22 22:24:33 - tests.test_api - INFO - Datos enviados: {'title': 'Test Automation - Talento Lab', 'body': 'Este es un test de automatización para el proyecto final', 'userId': 1}
+2025-11-22 22:24:33 - tests.test_api - INFO - Status Code: 201
+2025-11-22 22:24:33 - tests.test_api - INFO - ✓ Post creado exitosamente con ID: 101
+2025-11-22 22:24:33 - tests.test_api - INFO - === Iniciando API Test 5: DELETE Post ===
+2025-11-22 22:24:34 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/posts/1
+2025-11-22 22:24:34 - tests.test_api - INFO - Status Code: 200
+2025-11-22 22:24:34 - tests.test_api - INFO - ✓ Post eliminado exitosamente
+2025-11-22 22:24:34 - tests.test_api - INFO - === Iniciando API Test 6: Encadenamiento POST + GET ===
+2025-11-22 22:24:34 - tests.test_api - INFO - Paso 1: Creando post...
+2025-11-22 22:24:34 - tests.test_api - INFO - ✓ Post creado con ID: 101
+2025-11-22 22:24:34 - tests.test_api - INFO - Paso 2: Obteniendo lista de posts...
+2025-11-22 22:24:34 - tests.test_api - INFO - ✓ Lista obtenida: 100 posts encontrados
+2025-11-22 22:24:34 - tests.test_api - INFO - ✓ Encadenamiento de peticiones exitoso
+2025-11-22 22:47:05 - tests.test_api - INFO - === Iniciando API Test 1: GET Lista de Usuarios ===
+2025-11-22 22:47:05 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users
+2025-11-22 22:47:05 - tests.test_api - INFO - Status Code: 200
+2025-11-22 22:47:05 - tests.test_api - INFO - ✓ Test exitoso: 10 usuarios obtenidos
+2025-11-22 22:47:05 - tests.test_api - INFO - Primer usuario: Leanne Graham (Sincere@april.biz)
+2025-11-22 22:47:05 - tests.test_api - INFO - === Iniciando API Test 2: GET Usuario Individual ===
+2025-11-22 22:47:06 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users/1
+2025-11-22 22:47:06 - tests.test_api - INFO - Status Code: 200
+2025-11-22 22:47:06 - tests.test_api - INFO - ✓ Usuario obtenido: Leanne Graham
+2025-11-22 22:47:06 - tests.test_api - INFO - Email: Sincere@april.biz
+2025-11-22 22:47:06 - tests.test_api - INFO - === Iniciando API Test 3: GET Usuario No Encontrado (NEGATIVO) ===
+2025-11-22 22:47:06 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users/9999
+2025-11-22 22:47:06 - tests.test_api - INFO - Status Code: 404
+2025-11-22 22:47:06 - tests.test_api - INFO - ✓ Test exitoso: Usuario inexistente retorna 404 correctamente
+2025-11-22 22:47:06 - tests.test_api - INFO - === Iniciando API Test 4: POST Crear Post ===
+2025-11-22 22:47:06 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/posts
+2025-11-22 22:47:06 - tests.test_api - INFO - Datos enviados: {'title': 'Test Automation - Talento Lab', 'body': 'Este es un test de automatización para el proyecto final', 'userId': 1}
+2025-11-22 22:47:06 - tests.test_api - INFO - Status Code: 201
+2025-11-22 22:47:06 - tests.test_api - INFO - ✓ Post creado exitosamente con ID: 101
+2025-11-22 22:47:06 - tests.test_api - INFO - === Iniciando API Test 5: DELETE Post ===
+2025-11-22 22:47:06 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/posts/1
+2025-11-22 22:47:06 - tests.test_api - INFO - Status Code: 200
+2025-11-22 22:47:06 - tests.test_api - INFO - ✓ Post eliminado exitosamente
+2025-11-22 22:47:06 - tests.test_api - INFO - === Iniciando API Test 6: Encadenamiento POST + GET ===
+2025-11-22 22:47:06 - tests.test_api - INFO - Paso 1: Creando post...
+2025-11-22 22:47:07 - tests.test_api - INFO - ✓ Post creado con ID: 101
+2025-11-22 22:47:07 - tests.test_api - INFO - Paso 2: Obteniendo lista de posts...
+2025-11-22 22:47:07 - tests.test_api - INFO - ✓ Lista obtenida: 100 posts encontrados
+2025-11-22 22:47:07 - tests.test_api - INFO - ✓ Encadenamiento de peticiones exitoso
+2025-11-22 22:49:02 - tests.test_visualizacion - INFO - === Iniciando TC-006: Visualización de servicios ===
+2025-11-22 22:49:02 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:49:03 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:49:03 - pages.home_page - INFO - Scrolling a sección Servicios
+2025-11-22 22:49:13 - pages.home_page - ERROR - Timeout al buscar elemento: ('xpath', "//section[contains(@class, 'servicios')]")
+2025-11-22 22:51:26 - tests.test_visualizacion - INFO - === Iniciando TC-006: Visualización de servicios ===
+2025-11-22 22:51:26 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:51:27 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:51:27 - pages.home_page - INFO - Scrolling a sección Servicios
+2025-11-22 22:51:27 - pages.home_page - INFO - Elemento encontrado: ('id', 'servicios')
+2025-11-22 22:51:39 - pages.servicios_page - INFO - Se encontraron 0 tarjetas de servicios
+2025-11-22 22:51:39 - tests.test_visualizacion - INFO - Tarjetas de servicios encontradas: 0
+2025-11-22 22:51:39 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Reclutamiento')]")
+2025-11-22 22:51:39 - pages.servicios_page - INFO - Servicio 'Reclutamiento' encontrado
+2025-11-22 22:51:39 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Headhunting')]")
+2025-11-22 22:51:39 - pages.servicios_page - INFO - Servicio 'Headhunting' encontrado
+2025-11-22 22:51:39 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Evaluación')]")
+2025-11-22 22:51:39 - pages.servicios_page - INFO - Servicio 'Evaluación' encontrado
+2025-11-22 22:51:39 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Consultoría')]")
+2025-11-22 22:51:39 - pages.servicios_page - INFO - Servicio 'Consultoría' encontrado
+2025-11-22 22:51:39 - tests.test_visualizacion - INFO - Servicios disponibles: ['Reclutamiento', 'Headhunting', 'Evaluación', 'Consultoría']
+2025-11-22 22:52:16 - tests.test_visualizacion - INFO - === Iniciando TC-006: Visualización de servicios ===
+2025-11-22 22:52:16 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:52:16 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:52:16 - pages.home_page - INFO - Scrolling a sección Servicios
+2025-11-22 22:52:16 - pages.home_page - INFO - Elemento encontrado: ('id', 'servicios')
+2025-11-22 22:52:18 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Reclutamiento')]")
+2025-11-22 22:52:18 - pages.servicios_page - INFO - Servicio 'Reclutamiento' encontrado
+2025-11-22 22:52:18 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Headhunting')]")
+2025-11-22 22:52:18 - pages.servicios_page - INFO - Servicio 'Headhunting' encontrado
+2025-11-22 22:52:18 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Evaluación')]")
+2025-11-22 22:52:18 - pages.servicios_page - INFO - Servicio 'Evaluación' encontrado
+2025-11-22 22:52:18 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Consultoría')]")
+2025-11-22 22:52:18 - pages.servicios_page - INFO - Servicio 'Consultoría' encontrado
+2025-11-22 22:52:18 - tests.test_visualizacion - INFO - Servicios disponibles: ['Reclutamiento', 'Headhunting', 'Evaluación', 'Consultoría']
+2025-11-22 22:52:18 - tests.test_visualizacion - INFO - ✓ Test exitoso: Todos los servicios visualizados correctamente
+2025-11-22 22:52:41 - tests.test_visualizacion - INFO - === Iniciando TC-005: Visualización de testimonios ===
+2025-11-22 22:52:41 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:52:41 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:52:43 - pages.clientes_page - INFO - Elemento encontrado: ('xpath', "//*[contains(text(), 'Ross')]")
+2025-11-22 22:52:43 - pages.clientes_page - INFO - Testimonio de Ross encontrado
+2025-11-22 22:52:43 - pages.clientes_page - INFO - Elemento encontrado: ('xpath', "//*[contains(text(), 'Joey')]")
+2025-11-22 22:52:43 - pages.clientes_page - INFO - Testimonio de Joey encontrado
+2025-11-22 22:52:43 - pages.clientes_page - INFO - Elemento encontrado: ('xpath', "//*[contains(text(), 'Phoebe')]")
+2025-11-22 22:52:43 - pages.clientes_page - INFO - Testimonio de Phoebe encontrado
+2025-11-22 22:52:43 - pages.clientes_page - INFO - Verificación de testimonios: {'Ross': True, 'Joey': True, 'Phoebe': True}
+2025-11-22 22:52:43 - tests.test_visualizacion - INFO - Testimonios encontrados: {'Ross': True, 'Joey': True, 'Phoebe': True}
+2025-11-22 22:52:43 - pages.clientes_page - INFO - Se encontraron 3 testimonios
+2025-11-22 22:52:43 - tests.test_visualizacion - INFO - ✓ Test exitoso: 3 testimonios verificados
+2025-11-22 22:52:49 - tests.test_visualizacion - INFO - === Iniciando TC-006: Visualización de servicios ===
+2025-11-22 22:52:49 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:52:50 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:52:50 - pages.home_page - INFO - Scrolling a sección Servicios
+2025-11-22 22:52:50 - pages.home_page - INFO - Elemento encontrado: ('id', 'servicios')
+2025-11-22 22:52:52 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Reclutamiento')]")
+2025-11-22 22:52:52 - pages.servicios_page - INFO - Servicio 'Reclutamiento' encontrado
+2025-11-22 22:52:52 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Headhunting')]")
+2025-11-22 22:52:52 - pages.servicios_page - INFO - Servicio 'Headhunting' encontrado
+2025-11-22 22:52:52 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Evaluación')]")
+2025-11-22 22:52:52 - pages.servicios_page - INFO - Servicio 'Evaluación' encontrado
+2025-11-22 22:52:52 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Consultoría')]")
+2025-11-22 22:52:52 - pages.servicios_page - INFO - Servicio 'Consultoría' encontrado
+2025-11-22 22:52:52 - tests.test_visualizacion - INFO - Servicios disponibles: ['Reclutamiento', 'Headhunting', 'Evaluación', 'Consultoría']
+2025-11-22 22:52:52 - tests.test_visualizacion - INFO - ✓ Test exitoso: Todos los servicios visualizados correctamente
+2025-11-22 22:52:58 - tests.test_visualizacion - INFO - === Iniciando TC-007: Información para candidatos ===
+2025-11-22 22:52:58 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:52:58 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:53:00 - pages.home_page - INFO - Elemento encontrado: ('link text', 'Registrate')
+2025-11-22 22:53:00 - pages.home_page - INFO - Página principal verificada correctamente
+2025-11-22 22:53:00 - pages.home_page - INFO - Scrolling a sección Servicios
+2025-11-22 22:53:00 - pages.home_page - INFO - Elemento encontrado: ('id', 'servicios')
+2025-11-22 22:53:01 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Reclutamiento')]")
+2025-11-22 22:53:01 - pages.servicios_page - INFO - Servicio 'Reclutamiento' encontrado
+2025-11-22 22:53:01 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Headhunting')]")
+2025-11-22 22:53:01 - pages.servicios_page - INFO - Servicio 'Headhunting' encontrado
+2025-11-22 22:53:01 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Evaluación')]")
+2025-11-22 22:53:01 - pages.servicios_page - INFO - Servicio 'Evaluación' encontrado
+2025-11-22 22:53:01 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Consultoría')]")
+2025-11-22 22:53:01 - pages.servicios_page - INFO - Servicio 'Consultoría' encontrado
+2025-11-22 22:53:01 - tests.test_visualizacion - INFO - ✓ Test exitoso: Información accesible y bien presentada
+2025-11-22 22:53:51 - tests.test_api - INFO - === Iniciando API Test 1: GET Lista de Usuarios ===
+2025-11-22 22:53:51 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users
+2025-11-22 22:53:51 - tests.test_api - INFO - Status Code: 200
+2025-11-22 22:53:51 - tests.test_api - INFO - ✓ Test exitoso: 10 usuarios obtenidos
+2025-11-22 22:53:51 - tests.test_api - INFO - Primer usuario: Leanne Graham (Sincere@april.biz)
+2025-11-22 22:53:51 - tests.test_api - INFO - === Iniciando API Test 2: GET Usuario Individual ===
+2025-11-22 22:53:52 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users/1
+2025-11-22 22:53:52 - tests.test_api - INFO - Status Code: 200
+2025-11-22 22:53:52 - tests.test_api - INFO - ✓ Usuario obtenido: Leanne Graham
+2025-11-22 22:53:52 - tests.test_api - INFO - Email: Sincere@april.biz
+2025-11-22 22:53:52 - tests.test_api - INFO - === Iniciando API Test 3: GET Usuario No Encontrado (NEGATIVO) ===
+2025-11-22 22:53:52 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users/9999
+2025-11-22 22:53:52 - tests.test_api - INFO - Status Code: 404
+2025-11-22 22:53:52 - tests.test_api - INFO - ✓ Test exitoso: Usuario inexistente retorna 404 correctamente
+2025-11-22 22:53:52 - tests.test_api - INFO - === Iniciando API Test 4: POST Crear Post ===
+2025-11-22 22:53:52 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/posts
+2025-11-22 22:53:52 - tests.test_api - INFO - Datos enviados: {'title': 'Test Automation - Talento Lab', 'body': 'Este es un test de automatización para el proyecto final', 'userId': 1}
+2025-11-22 22:53:52 - tests.test_api - INFO - Status Code: 201
+2025-11-22 22:53:52 - tests.test_api - INFO - ✓ Post creado exitosamente con ID: 101
+2025-11-22 22:53:52 - tests.test_api - INFO - === Iniciando API Test 5: DELETE Post ===
+2025-11-22 22:53:52 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/posts/1
+2025-11-22 22:53:52 - tests.test_api - INFO - Status Code: 200
+2025-11-22 22:53:52 - tests.test_api - INFO - ✓ Post eliminado exitosamente
+2025-11-22 22:53:52 - tests.test_api - INFO - === Iniciando API Test 6: Encadenamiento POST + GET ===
+2025-11-22 22:53:52 - tests.test_api - INFO - Paso 1: Creando post...
+2025-11-22 22:53:52 - tests.test_api - INFO - ✓ Post creado con ID: 101
+2025-11-22 22:53:52 - tests.test_api - INFO - Paso 2: Obteniendo lista de posts...
+2025-11-22 22:53:53 - tests.test_api - INFO - ✓ Lista obtenida: 100 posts encontrados
+2025-11-22 22:53:53 - tests.test_api - INFO - ✓ Encadenamiento de peticiones exitoso
+2025-11-22 22:53:56 - tests.test_visualizacion - INFO - === Iniciando TC-005: Visualización de testimonios ===
+2025-11-22 22:53:56 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:53:57 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:53:59 - pages.clientes_page - INFO - Elemento encontrado: ('xpath', "//*[contains(text(), 'Ross')]")
+2025-11-22 22:53:59 - pages.clientes_page - INFO - Testimonio de Ross encontrado
+2025-11-22 22:53:59 - pages.clientes_page - INFO - Elemento encontrado: ('xpath', "//*[contains(text(), 'Joey')]")
+2025-11-22 22:53:59 - pages.clientes_page - INFO - Testimonio de Joey encontrado
+2025-11-22 22:53:59 - pages.clientes_page - INFO - Elemento encontrado: ('xpath', "//*[contains(text(), 'Phoebe')]")
+2025-11-22 22:53:59 - pages.clientes_page - INFO - Testimonio de Phoebe encontrado
+2025-11-22 22:53:59 - pages.clientes_page - INFO - Verificación de testimonios: {'Ross': True, 'Joey': True, 'Phoebe': True}
+2025-11-22 22:53:59 - tests.test_visualizacion - INFO - Testimonios encontrados: {'Ross': True, 'Joey': True, 'Phoebe': True}
+2025-11-22 22:53:59 - pages.clientes_page - INFO - Se encontraron 3 testimonios
+2025-11-22 22:53:59 - tests.test_visualizacion - INFO - ✓ Test exitoso: 3 testimonios verificados
+2025-11-22 22:54:04 - tests.test_visualizacion - INFO - === Iniciando TC-006: Visualización de servicios ===
+2025-11-22 22:54:04 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:54:05 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:54:05 - pages.home_page - INFO - Scrolling a sección Servicios
+2025-11-22 22:54:05 - pages.home_page - INFO - Elemento encontrado: ('id', 'servicios')
+2025-11-22 22:54:07 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Reclutamiento')]")
+2025-11-22 22:54:07 - pages.servicios_page - INFO - Servicio 'Reclutamiento' encontrado
+2025-11-22 22:54:07 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Headhunting')]")
+2025-11-22 22:54:07 - pages.servicios_page - INFO - Servicio 'Headhunting' encontrado
+2025-11-22 22:54:07 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Evaluación')]")
+2025-11-22 22:54:07 - pages.servicios_page - INFO - Servicio 'Evaluación' encontrado
+2025-11-22 22:54:07 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Consultoría')]")
+2025-11-22 22:54:07 - pages.servicios_page - INFO - Servicio 'Consultoría' encontrado
+2025-11-22 22:54:07 - tests.test_visualizacion - INFO - Servicios disponibles: ['Reclutamiento', 'Headhunting', 'Evaluación', 'Consultoría']
+2025-11-22 22:54:07 - tests.test_visualizacion - INFO - ✓ Test exitoso: Todos los servicios visualizados correctamente
+2025-11-22 22:54:13 - tests.test_visualizacion - INFO - === Iniciando TC-007: Información para candidatos ===
+2025-11-22 22:54:13 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:54:13 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:54:15 - pages.home_page - INFO - Elemento encontrado: ('link text', 'Registrate')
+2025-11-22 22:54:15 - pages.home_page - INFO - Página principal verificada correctamente
+2025-11-22 22:54:15 - pages.home_page - INFO - Scrolling a sección Servicios
+2025-11-22 22:54:15 - pages.home_page - INFO - Elemento encontrado: ('id', 'servicios')
+2025-11-22 22:54:16 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Reclutamiento')]")
+2025-11-22 22:54:16 - pages.servicios_page - INFO - Servicio 'Reclutamiento' encontrado
+2025-11-22 22:54:16 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Headhunting')]")
+2025-11-22 22:54:16 - pages.servicios_page - INFO - Servicio 'Headhunting' encontrado
+2025-11-22 22:54:16 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Evaluación')]")
+2025-11-22 22:54:16 - pages.servicios_page - INFO - Servicio 'Evaluación' encontrado
+2025-11-22 22:54:16 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Consultoría')]")
+2025-11-22 22:54:16 - pages.servicios_page - INFO - Servicio 'Consultoría' encontrado
+2025-11-22 22:54:16 - tests.test_visualizacion - INFO - ✓ Test exitoso: Información accesible y bien presentada
+2025-11-22 22:58:09 - tests.test_carga_cv - INFO - === Iniciando TC-001: Registro válido ===
+2025-11-22 22:58:09 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:58:10 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:58:12 - pages.home_page - INFO - Elemento encontrado: ('link text', 'Registrate')
+2025-11-22 22:58:12 - pages.home_page - INFO - Página principal verificada correctamente
+2025-11-22 22:58:12 - pages.home_page - INFO - URL actual: https://talentolab-test.netlify.app/
+2025-11-22 22:58:12 - tests.test_carga_cv - INFO - URL inicial: https://talentolab-test.netlify.app/
+2025-11-22 22:58:12 - pages.home_page - INFO - Haciendo clic en botón 'Registrate'
+2025-11-22 22:58:12 - pages.home_page - INFO - Elemento encontrado: ('link text', 'Registrate')
+2025-11-22 22:58:12 - pages.home_page - INFO - Click realizado en: ('link text', 'Registrate')
+2025-11-22 22:58:14 - pages.home_page - INFO - URL actual: https://talentolab-test.netlify.app/register
+2025-11-22 22:58:14 - tests.test_carga_cv - INFO - URL después de click: https://talentolab-test.netlify.app/register
+2025-11-22 22:58:14 - tests.test_carga_cv - INFO - ✓ Test exitoso: Redirección correcta al formulario de registro
+2025-11-22 22:58:20 - tests.test_carga_cv - INFO - === Iniciando TC-001b: Registro completo ===
+2025-11-22 22:58:20 - pages.register_page - INFO - Navegando a: https://talentolab-test.netlify.app/register
+2025-11-22 22:58:22 - pages.register_page - INFO - Completando formulario: nombre=Carlos Mendez, email=carlos.test@talentolab.com
+2025-11-22 22:58:22 - pages.register_page - INFO - Elemento encontrado: ('name', 'nombre')
+2025-11-22 22:58:22 - pages.register_page - INFO - Texto 'Carlos Mendez' ingresado en: ('name', 'nombre')
+2025-11-22 22:58:22 - pages.register_page - INFO - Elemento encontrado: ('name', 'email')
+2025-11-22 22:58:22 - pages.register_page - INFO - Texto 'carlos.test@talentolab.com' ingresado en: ('name', 'email')
+2025-11-22 22:58:22 - pages.register_page - INFO - Elemento encontrado: ('name', 'contrasena')
+2025-11-22 22:58:23 - pages.register_page - INFO - Texto 'Test123456' ingresado en: ('name', 'contrasena')
+2025-11-22 22:58:24 - pages.register_page - INFO - Enviando formulario de registro
+2025-11-22 22:58:24 - pages.register_page - INFO - Elemento encontrado: ('xpath', "//button[@type='submit']")
+2025-11-22 22:58:24 - pages.register_page - INFO - Click realizado en: ('xpath', "//button[@type='submit']")
+2025-11-22 22:58:26 - tests.test_carga_cv - INFO - ✓ Formulario de registro enviado correctamente
+2025-11-22 22:58:31 - tests.test_carga_cv - INFO - === Iniciando TC-002: Carga CV válido ===
+2025-11-22 22:58:31 - pages.register_page - INFO - Navegando a: https://talentolab-test.netlify.app/register
+2025-11-22 22:58:34 - pages.register_page - INFO - Completando formulario: nombre=Test Usuario, email=test@example.com
+2025-11-22 22:58:34 - pages.register_page - INFO - Elemento encontrado: ('name', 'nombre')
+2025-11-22 22:58:34 - pages.register_page - INFO - Texto 'Test Usuario' ingresado en: ('name', 'nombre')
+2025-11-22 22:58:34 - pages.register_page - INFO - Elemento encontrado: ('name', 'email')
+2025-11-22 22:58:34 - pages.register_page - INFO - Texto 'test@example.com' ingresado en: ('name', 'email')
+2025-11-22 22:58:34 - pages.register_page - INFO - Elemento encontrado: ('name', 'contrasena')
+2025-11-22 22:58:34 - pages.register_page - INFO - Texto 'Pass123' ingresado en: ('name', 'contrasena')
+2025-11-22 22:58:34 - pages.register_page - INFO - Subiendo CV: C:\Users\Medraut\IdeaProjects\proyecto-final-automation-testing-LucianoMoliterno\test_data\cv_prueba.txt
+2025-11-22 22:58:34 - pages.register_page - INFO - CV cargado exitosamente
+2025-11-22 22:58:34 - tests.test_carga_cv - INFO - ✓ CV cargado sin errores
+2025-11-22 22:58:41 - tests.test_carga_cv - INFO - === Iniciando TC-008: Carga CV corrupto (NEGATIVO) ===
+2025-11-22 22:58:41 - pages.register_page - INFO - Navegando a: https://talentolab-test.netlify.app/register
+2025-11-22 22:58:43 - pages.register_page - INFO - Completando formulario: nombre=Test Corrupto, email=corrupto@test.com
+2025-11-22 22:58:43 - pages.register_page - INFO - Elemento encontrado: ('name', 'nombre')
+2025-11-22 22:58:43 - pages.register_page - INFO - Texto 'Test Corrupto' ingresado en: ('name', 'nombre')
+2025-11-22 22:58:43 - pages.register_page - INFO - Elemento encontrado: ('name', 'email')
+2025-11-22 22:58:43 - pages.register_page - INFO - Texto 'corrupto@test.com' ingresado en: ('name', 'email')
+2025-11-22 22:58:43 - pages.register_page - INFO - Elemento encontrado: ('name', 'contrasena')
+2025-11-22 22:58:44 - pages.register_page - INFO - Texto 'Test123' ingresado en: ('name', 'contrasena')
+2025-11-22 22:58:44 - pages.register_page - INFO - Subiendo CV: C:\Users\Medraut\IdeaProjects\proyecto-final-automation-testing-LucianoMoliterno\test_data\cv_corrupto.pdf
+2025-11-22 22:58:44 - pages.register_page - INFO - CV cargado exitosamente
+2025-11-22 22:58:44 - tests.test_carga_cv - WARNING - BUG-005: Archivo corrupto fue aceptado (debería rechazarse)
+2025-11-22 22:58:49 - tests.test_carga_cv - INFO - === Iniciando TC-009: Carga CV excede límite peso (NEGATIVO) ===
+2025-11-22 22:58:49 - pages.register_page - INFO - Navegando a: https://talentolab-test.netlify.app/register
+2025-11-22 22:58:52 - pages.register_page - INFO - Completando formulario: nombre=Test Grande, email=grande@test.com
+2025-11-22 22:58:52 - pages.register_page - INFO - Elemento encontrado: ('name', 'nombre')
+2025-11-22 22:58:52 - pages.register_page - INFO - Texto 'Test Grande' ingresado en: ('name', 'nombre')
+2025-11-22 22:58:52 - pages.register_page - INFO - Elemento encontrado: ('name', 'email')
+2025-11-22 22:58:52 - pages.register_page - INFO - Texto 'grande@test.com' ingresado en: ('name', 'email')
+2025-11-22 22:58:52 - pages.register_page - INFO - Elemento encontrado: ('name', 'contrasena')
+2025-11-22 22:58:52 - pages.register_page - INFO - Texto 'Test123' ingresado en: ('name', 'contrasena')
+2025-11-22 22:58:52 - pages.register_page - INFO - Subiendo CV: C:\Users\Medraut\IdeaProjects\proyecto-final-automation-testing-LucianoMoliterno\test_data\cv_grande.pdf
+2025-11-22 22:58:52 - pages.register_page - INFO - CV cargado exitosamente
+2025-11-22 22:58:52 - tests.test_carga_cv - WARNING - BUG-001: Archivo grande fue aceptado (debería rechazarse)
+2025-11-22 22:59:13 - tests.test_contacto - INFO - === Iniciando TC-003: Envío formulario contacto válido ===
+2025-11-22 22:59:13 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:59:13 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:59:15 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 22:59:15 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 22:59:16 - pages.contacto_page - INFO - Completando formulario con: nombre=Carlos Mendez, email=carlos@talentolab.com
+2025-11-22 22:59:16 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 22:59:16 - pages.contacto_page - INFO - Texto 'Carlos Mendez' ingresado en: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 22:59:16 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Email']")
+2025-11-22 22:59:16 - pages.contacto_page - INFO - Texto 'carlos@talentolab.com' ingresado en: ('css selector', "input[placeholder='Email']")
+2025-11-22 22:59:16 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 22:59:16 - pages.contacto_page - INFO - Texto '¿Cómo es el proceso de selección?' ingresado en: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 22:59:16 - pages.contacto_page - INFO - Formulario completado exitosamente
+2025-11-22 22:59:17 - pages.contacto_page - INFO - Enviando formulario de contacto
+2025-11-22 22:59:17 - pages.contacto_page - INFO - Elemento encontrado: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 22:59:18 - pages.contacto_page - INFO - Click realizado en: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 22:59:20 - tests.test_contacto - INFO - ✓ Formulario enviado - Test ejecutado
+2025-11-22 22:59:20 - tests.test_contacto - WARNING - BUG-003 conocido: Formulario no valida correctamente
+2025-11-22 22:59:25 - tests.test_contacto - INFO - === Test parametrizado con datos: Carlos Mendez ===
+2025-11-22 22:59:25 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:59:26 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:59:27 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 22:59:27 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 22:59:28 - pages.contacto_page - INFO - Completando formulario con: nombre=Carlos Mendez, email=carlos@test.com
+2025-11-22 22:59:28 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 22:59:28 - pages.contacto_page - INFO - Texto 'Carlos Mendez' ingresado en: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 22:59:28 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Email']")
+2025-11-22 22:59:28 - pages.contacto_page - INFO - Texto 'carlos@test.com' ingresado en: ('css selector', "input[placeholder='Email']")
+2025-11-22 22:59:28 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 22:59:28 - pages.contacto_page - INFO - Texto '¿Cómo es el proceso de selección?' ingresado en: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 22:59:28 - pages.contacto_page - INFO - Formulario completado exitosamente
+2025-11-22 22:59:29 - pages.contacto_page - INFO - Enviando formulario de contacto
+2025-11-22 22:59:29 - pages.contacto_page - INFO - Elemento encontrado: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 22:59:29 - pages.contacto_page - INFO - Click realizado en: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 22:59:30 - tests.test_contacto - INFO - Se esperaba éxito en este caso
+2025-11-22 22:59:30 - tests.test_contacto - INFO - ✓ Test parametrizado ejecutado: Carlos Mendez
+2025-11-22 22:59:36 - tests.test_contacto - INFO - === Test parametrizado con datos: Ana Lopez ===
+2025-11-22 22:59:36 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:59:36 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:59:37 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 22:59:37 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 22:59:38 - pages.contacto_page - INFO - Completando formulario con: nombre=Ana Lopez, email=ana@test.com
+2025-11-22 22:59:38 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 22:59:38 - pages.contacto_page - INFO - Texto 'Ana Lopez' ingresado en: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 22:59:38 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Email']")
+2025-11-22 22:59:39 - pages.contacto_page - INFO - Texto 'ana@test.com' ingresado en: ('css selector', "input[placeholder='Email']")
+2025-11-22 22:59:39 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 22:59:39 - pages.contacto_page - INFO - Texto 'Necesito información sobre servicios' ingresado en: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 22:59:39 - pages.contacto_page - INFO - Formulario completado exitosamente
+2025-11-22 22:59:40 - pages.contacto_page - INFO - Enviando formulario de contacto
+2025-11-22 22:59:40 - pages.contacto_page - INFO - Elemento encontrado: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 22:59:40 - pages.contacto_page - INFO - Click realizado en: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 22:59:41 - tests.test_contacto - INFO - Se esperaba éxito en este caso
+2025-11-22 22:59:41 - tests.test_contacto - INFO - ✓ Test parametrizado ejecutado: Ana Lopez
+2025-11-22 22:59:46 - tests.test_contacto - INFO - === Test parametrizado con datos:  ===
+2025-11-22 22:59:46 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:59:47 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:59:48 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 22:59:48 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 22:59:49 - pages.contacto_page - INFO - Completando formulario con: nombre=, email=vacio@test.com
+2025-11-22 22:59:49 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 22:59:49 - pages.contacto_page - INFO - Texto '' ingresado en: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 22:59:49 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Email']")
+2025-11-22 22:59:49 - pages.contacto_page - INFO - Texto 'vacio@test.com' ingresado en: ('css selector', "input[placeholder='Email']")
+2025-11-22 22:59:49 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 22:59:49 - pages.contacto_page - INFO - Texto 'Test campo nombre vacío' ingresado en: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 22:59:49 - pages.contacto_page - INFO - Formulario completado exitosamente
+2025-11-22 22:59:50 - pages.contacto_page - INFO - Enviando formulario de contacto
+2025-11-22 22:59:50 - pages.contacto_page - INFO - Elemento encontrado: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 22:59:50 - pages.contacto_page - INFO - Click realizado en: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 22:59:51 - tests.test_contacto - INFO - Se esperaba error en este caso
+2025-11-22 22:59:51 - tests.test_contacto - INFO - ✓ Test parametrizado ejecutado: 
+2025-11-22 22:59:57 - tests.test_contacto - INFO - === Test parametrizado con datos: Test User ===
+2025-11-22 22:59:57 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 22:59:57 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 22:59:58 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 22:59:58 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 22:59:59 - pages.contacto_page - INFO - Completando formulario con: nombre=Test User, email=emailinvalido
+2025-11-22 22:59:59 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:00:00 - pages.contacto_page - INFO - Texto 'Test User' ingresado en: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:00:00 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:00:00 - pages.contacto_page - INFO - Texto 'emailinvalido' ingresado en: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:00:00 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:00:00 - pages.contacto_page - INFO - Texto 'Test email sin formato' ingresado en: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:00:00 - pages.contacto_page - INFO - Formulario completado exitosamente
+2025-11-22 23:00:01 - pages.contacto_page - INFO - Enviando formulario de contacto
+2025-11-22 23:00:01 - pages.contacto_page - INFO - Elemento encontrado: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:00:01 - pages.contacto_page - INFO - Click realizado en: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:00:02 - tests.test_contacto - INFO - Se esperaba error en este caso
+2025-11-22 23:00:02 - tests.test_contacto - INFO - ✓ Test parametrizado ejecutado: Test User
+2025-11-22 23:00:08 - tests.test_contacto - INFO - === Test parametrizado con datos: Pedro Gomez ===
+2025-11-22 23:00:08 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:00:08 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:00:09 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 23:00:09 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 23:00:10 - pages.contacto_page - INFO - Completando formulario con: nombre=Pedro Gomez, email=pedro@test.com
+2025-11-22 23:00:10 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:00:10 - pages.contacto_page - INFO - Texto 'Pedro Gomez' ingresado en: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:00:10 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:00:10 - pages.contacto_page - INFO - Texto 'pedro@test.com' ingresado en: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:00:10 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:00:10 - pages.contacto_page - INFO - Texto 'Consulta sobre reclutamiento IT' ingresado en: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:00:10 - pages.contacto_page - INFO - Formulario completado exitosamente
+2025-11-22 23:00:11 - pages.contacto_page - INFO - Enviando formulario de contacto
+2025-11-22 23:00:11 - pages.contacto_page - INFO - Elemento encontrado: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:00:11 - pages.contacto_page - INFO - Click realizado en: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:00:12 - tests.test_contacto - INFO - Se esperaba éxito en este caso
+2025-11-22 23:00:12 - tests.test_contacto - INFO - ✓ Test parametrizado ejecutado: Pedro Gomez
+2025-11-22 23:00:18 - tests.test_contacto - INFO - === Iniciando TC-004: Formulario campos vacíos (NEGATIVO) ===
+2025-11-22 23:00:18 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:00:18 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:00:20 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 23:00:21 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 23:00:22 - tests.test_contacto - INFO - Intentando enviar formulario sin completar campos
+2025-11-22 23:00:22 - pages.contacto_page - INFO - Campos vacíos: True
+2025-11-22 23:00:22 - tests.test_contacto - INFO - Campos vacíos: True
+2025-11-22 23:00:22 - pages.contacto_page - INFO - Enviando formulario de contacto
+2025-11-22 23:00:22 - pages.contacto_page - INFO - Elemento encontrado: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:00:22 - pages.contacto_page - INFO - Click realizado en: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:00:24 - tests.test_contacto - WARNING - BUG-003: Formulario no valida campos vacíos
+2025-11-22 23:00:24 - tests.test_contacto - INFO - ✓ Test negativo ejecutado - documenta BUG-003
+2025-11-22 23:00:45 - tests.test_responsive - INFO - === Iniciando TC-010: Navegación Mobile ===
+2025-11-22 23:00:45 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:00:45 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:00:48 - pages.home_page - INFO - Elemento encontrado: ('link text', 'Registrate')
+2025-11-22 23:00:48 - pages.home_page - INFO - Página principal verificada correctamente
+2025-11-22 23:00:48 - tests.test_responsive - INFO - ✓ Página carga correctamente en vista móvil
+2025-11-22 23:00:48 - pages.home_page - INFO - Scrolling a sección Servicios
+2025-11-22 23:00:48 - pages.home_page - INFO - Elemento encontrado: ('id', 'servicios')
+2025-11-22 23:00:50 - tests.test_responsive - INFO - ✓ Scroll a servicios funcional
+2025-11-22 23:00:50 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Reclutamiento')]")
+2025-11-22 23:00:50 - pages.servicios_page - INFO - Servicio 'Reclutamiento' encontrado
+2025-11-22 23:00:50 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Headhunting')]")
+2025-11-22 23:00:50 - pages.servicios_page - INFO - Servicio 'Headhunting' encontrado
+2025-11-22 23:00:50 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Evaluación')]")
+2025-11-22 23:00:50 - pages.servicios_page - INFO - Servicio 'Evaluación' encontrado
+2025-11-22 23:00:50 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Consultoría')]")
+2025-11-22 23:00:50 - pages.servicios_page - INFO - Servicio 'Consultoría' encontrado
+2025-11-22 23:00:50 - tests.test_responsive - INFO - Servicios visibles en móvil: 4
+2025-11-22 23:00:53 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 23:00:53 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 23:00:55 - tests.test_responsive - INFO - ✓ Scroll a contacto funcional
+2025-11-22 23:00:55 - tests.test_responsive - INFO - ✓ Navegación móvil completada exitosamente
+2025-11-22 23:01:00 - tests.test_responsive - INFO - === Test: Formulario Contacto en Mobile ===
+2025-11-22 23:01:00 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:01:01 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:01:03 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 23:01:03 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 23:01:05 - pages.contacto_page - INFO - Completando formulario con: nombre=Test Mobile, email=mobile@test.com
+2025-11-22 23:01:05 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:01:05 - pages.contacto_page - INFO - Texto 'Test Mobile' ingresado en: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:01:05 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:01:05 - pages.contacto_page - INFO - Texto 'mobile@test.com' ingresado en: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:01:05 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:01:05 - pages.contacto_page - INFO - Texto 'Prueba desde dispositivo móvil' ingresado en: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:01:05 - pages.contacto_page - INFO - Formulario completado exitosamente
+2025-11-22 23:01:06 - tests.test_responsive - INFO - ✓ Formulario completado en vista móvil
+2025-11-22 23:01:12 - tests.test_responsive - INFO - === Test: Servicios Responsive Mobile ===
+2025-11-22 23:01:12 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:01:12 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:01:14 - pages.home_page - INFO - Scrolling a sección Servicios
+2025-11-22 23:01:14 - pages.home_page - INFO - Elemento encontrado: ('id', 'servicios')
+2025-11-22 23:01:16 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Reclutamiento')]")
+2025-11-22 23:01:16 - pages.servicios_page - INFO - Servicio 'Reclutamiento' encontrado
+2025-11-22 23:01:16 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Headhunting')]")
+2025-11-22 23:01:16 - pages.servicios_page - INFO - Servicio 'Headhunting' encontrado
+2025-11-22 23:01:16 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Evaluación')]")
+2025-11-22 23:01:16 - pages.servicios_page - INFO - Servicio 'Evaluación' encontrado
+2025-11-22 23:01:16 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Consultoría')]")
+2025-11-22 23:01:16 - pages.servicios_page - INFO - Servicio 'Consultoría' encontrado
+2025-11-22 23:01:16 - tests.test_responsive - INFO - Servicios visibles en móvil: 4
+2025-11-22 23:01:16 - tests.test_responsive - INFO - ✓ Servicios se muestran correctamente en móvil
+2025-11-22 23:01:32 - tests.test_api - INFO - === Iniciando API Test 1: GET Lista de Usuarios ===
+2025-11-22 23:01:33 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users
+2025-11-22 23:01:33 - tests.test_api - INFO - Status Code: 200
+2025-11-22 23:01:33 - tests.test_api - INFO - ✓ Test exitoso: 10 usuarios obtenidos
+2025-11-22 23:01:33 - tests.test_api - INFO - Primer usuario: Leanne Graham (Sincere@april.biz)
+2025-11-22 23:01:33 - tests.test_api - INFO - === Iniciando API Test 2: GET Usuario Individual ===
+2025-11-22 23:01:33 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users/1
+2025-11-22 23:01:33 - tests.test_api - INFO - Status Code: 200
+2025-11-22 23:01:33 - tests.test_api - INFO - ✓ Usuario obtenido: Leanne Graham
+2025-11-22 23:01:33 - tests.test_api - INFO - Email: Sincere@april.biz
+2025-11-22 23:01:33 - tests.test_api - INFO - === Iniciando API Test 3: GET Usuario No Encontrado (NEGATIVO) ===
+2025-11-22 23:01:33 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/users/9999
+2025-11-22 23:01:33 - tests.test_api - INFO - Status Code: 404
+2025-11-22 23:01:33 - tests.test_api - INFO - ✓ Test exitoso: Usuario inexistente retorna 404 correctamente
+2025-11-22 23:01:33 - tests.test_api - INFO - === Iniciando API Test 4: POST Crear Post ===
+2025-11-22 23:01:33 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/posts
+2025-11-22 23:01:33 - tests.test_api - INFO - Datos enviados: {'title': 'Test Automation - Talento Lab', 'body': 'Este es un test de automatización para el proyecto final', 'userId': 1}
+2025-11-22 23:01:33 - tests.test_api - INFO - Status Code: 201
+2025-11-22 23:01:33 - tests.test_api - INFO - ✓ Post creado exitosamente con ID: 101
+2025-11-22 23:01:33 - tests.test_api - INFO - === Iniciando API Test 5: DELETE Post ===
+2025-11-22 23:01:33 - tests.test_api - INFO - Endpoint: https://jsonplaceholder.typicode.com/posts/1
+2025-11-22 23:01:33 - tests.test_api - INFO - Status Code: 200
+2025-11-22 23:01:33 - tests.test_api - INFO - ✓ Post eliminado exitosamente
+2025-11-22 23:01:33 - tests.test_api - INFO - === Iniciando API Test 6: Encadenamiento POST + GET ===
+2025-11-22 23:01:33 - tests.test_api - INFO - Paso 1: Creando post...
+2025-11-22 23:01:34 - tests.test_api - INFO - ✓ Post creado con ID: 101
+2025-11-22 23:01:34 - tests.test_api - INFO - Paso 2: Obteniendo lista de posts...
+2025-11-22 23:01:34 - tests.test_api - INFO - ✓ Lista obtenida: 100 posts encontrados
+2025-11-22 23:01:34 - tests.test_api - INFO - ✓ Encadenamiento de peticiones exitoso
+2025-11-22 23:01:37 - tests.test_carga_cv - INFO - === Iniciando TC-001: Registro válido ===
+2025-11-22 23:01:37 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:01:38 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:01:40 - pages.home_page - INFO - Elemento encontrado: ('link text', 'Registrate')
+2025-11-22 23:01:40 - pages.home_page - INFO - Página principal verificada correctamente
+2025-11-22 23:01:40 - pages.home_page - INFO - URL actual: https://talentolab-test.netlify.app/
+2025-11-22 23:01:40 - tests.test_carga_cv - INFO - URL inicial: https://talentolab-test.netlify.app/
+2025-11-22 23:01:40 - pages.home_page - INFO - Haciendo clic en botón 'Registrate'
+2025-11-22 23:01:40 - pages.home_page - INFO - Elemento encontrado: ('link text', 'Registrate')
+2025-11-22 23:01:40 - pages.home_page - INFO - Click realizado en: ('link text', 'Registrate')
+2025-11-22 23:01:42 - pages.home_page - INFO - URL actual: https://talentolab-test.netlify.app/register
+2025-11-22 23:01:42 - tests.test_carga_cv - INFO - URL después de click: https://talentolab-test.netlify.app/register
+2025-11-22 23:01:42 - tests.test_carga_cv - INFO - ✓ Test exitoso: Redirección correcta al formulario de registro
+2025-11-22 23:01:50 - tests.test_carga_cv - INFO - === Iniciando TC-001b: Registro completo ===
+2025-11-22 23:01:50 - pages.register_page - INFO - Navegando a: https://talentolab-test.netlify.app/register
+2025-11-22 23:01:52 - pages.register_page - INFO - Completando formulario: nombre=Carlos Mendez, email=carlos.test@talentolab.com
+2025-11-22 23:01:52 - pages.register_page - INFO - Elemento encontrado: ('name', 'nombre')
+2025-11-22 23:01:52 - pages.register_page - INFO - Texto 'Carlos Mendez' ingresado en: ('name', 'nombre')
+2025-11-22 23:01:52 - pages.register_page - INFO - Elemento encontrado: ('name', 'email')
+2025-11-22 23:01:52 - pages.register_page - INFO - Texto 'carlos.test@talentolab.com' ingresado en: ('name', 'email')
+2025-11-22 23:01:52 - pages.register_page - INFO - Elemento encontrado: ('name', 'contrasena')
+2025-11-22 23:01:53 - pages.register_page - INFO - Texto 'Test123456' ingresado en: ('name', 'contrasena')
+2025-11-22 23:01:54 - pages.register_page - INFO - Enviando formulario de registro
+2025-11-22 23:01:54 - pages.register_page - INFO - Elemento encontrado: ('xpath', "//button[@type='submit']")
+2025-11-22 23:01:54 - pages.register_page - INFO - Click realizado en: ('xpath', "//button[@type='submit']")
+2025-11-22 23:01:56 - tests.test_carga_cv - INFO - ✓ Formulario de registro enviado correctamente
+2025-11-22 23:02:01 - tests.test_carga_cv - INFO - === Iniciando TC-002: Carga CV válido ===
+2025-11-22 23:02:01 - pages.register_page - INFO - Navegando a: https://talentolab-test.netlify.app/register
+2025-11-22 23:02:04 - pages.register_page - INFO - Completando formulario: nombre=Test Usuario, email=test@example.com
+2025-11-22 23:02:04 - pages.register_page - INFO - Elemento encontrado: ('name', 'nombre')
+2025-11-22 23:02:04 - pages.register_page - INFO - Texto 'Test Usuario' ingresado en: ('name', 'nombre')
+2025-11-22 23:02:04 - pages.register_page - INFO - Elemento encontrado: ('name', 'email')
+2025-11-22 23:02:04 - pages.register_page - INFO - Texto 'test@example.com' ingresado en: ('name', 'email')
+2025-11-22 23:02:04 - pages.register_page - INFO - Elemento encontrado: ('name', 'contrasena')
+2025-11-22 23:02:04 - pages.register_page - INFO - Texto 'Pass123' ingresado en: ('name', 'contrasena')
+2025-11-22 23:02:04 - pages.register_page - INFO - Subiendo CV: C:\Users\Medraut\IdeaProjects\proyecto-final-automation-testing-LucianoMoliterno\test_data\cv_prueba.txt
+2025-11-22 23:02:04 - pages.register_page - INFO - CV cargado exitosamente
+2025-11-22 23:02:04 - tests.test_carga_cv - INFO - ✓ CV cargado sin errores
+2025-11-22 23:02:11 - tests.test_carga_cv - INFO - === Iniciando TC-008: Carga CV corrupto (NEGATIVO) ===
+2025-11-22 23:02:11 - pages.register_page - INFO - Navegando a: https://talentolab-test.netlify.app/register
+2025-11-22 23:02:13 - pages.register_page - INFO - Completando formulario: nombre=Test Corrupto, email=corrupto@test.com
+2025-11-22 23:02:13 - pages.register_page - INFO - Elemento encontrado: ('name', 'nombre')
+2025-11-22 23:02:14 - pages.register_page - INFO - Texto 'Test Corrupto' ingresado en: ('name', 'nombre')
+2025-11-22 23:02:14 - pages.register_page - INFO - Elemento encontrado: ('name', 'email')
+2025-11-22 23:02:14 - pages.register_page - INFO - Texto 'corrupto@test.com' ingresado en: ('name', 'email')
+2025-11-22 23:02:14 - pages.register_page - INFO - Elemento encontrado: ('name', 'contrasena')
+2025-11-22 23:02:14 - pages.register_page - INFO - Texto 'Test123' ingresado en: ('name', 'contrasena')
+2025-11-22 23:02:14 - pages.register_page - INFO - Subiendo CV: C:\Users\Medraut\IdeaProjects\proyecto-final-automation-testing-LucianoMoliterno\test_data\cv_corrupto.pdf
+2025-11-22 23:02:14 - pages.register_page - INFO - CV cargado exitosamente
+2025-11-22 23:02:14 - tests.test_carga_cv - WARNING - BUG-005: Archivo corrupto fue aceptado (debería rechazarse)
+2025-11-22 23:02:20 - tests.test_carga_cv - INFO - === Iniciando TC-009: Carga CV excede límite peso (NEGATIVO) ===
+2025-11-22 23:02:20 - pages.register_page - INFO - Navegando a: https://talentolab-test.netlify.app/register
+2025-11-22 23:02:22 - pages.register_page - INFO - Completando formulario: nombre=Test Grande, email=grande@test.com
+2025-11-22 23:02:22 - pages.register_page - INFO - Elemento encontrado: ('name', 'nombre')
+2025-11-22 23:02:22 - pages.register_page - INFO - Texto 'Test Grande' ingresado en: ('name', 'nombre')
+2025-11-22 23:02:22 - pages.register_page - INFO - Elemento encontrado: ('name', 'email')
+2025-11-22 23:02:22 - pages.register_page - INFO - Texto 'grande@test.com' ingresado en: ('name', 'email')
+2025-11-22 23:02:22 - pages.register_page - INFO - Elemento encontrado: ('name', 'contrasena')
+2025-11-22 23:02:22 - pages.register_page - INFO - Texto 'Test123' ingresado en: ('name', 'contrasena')
+2025-11-22 23:02:22 - pages.register_page - INFO - Subiendo CV: C:\Users\Medraut\IdeaProjects\proyecto-final-automation-testing-LucianoMoliterno\test_data\cv_grande.pdf
+2025-11-22 23:02:22 - pages.register_page - INFO - CV cargado exitosamente
+2025-11-22 23:02:22 - tests.test_carga_cv - WARNING - BUG-001: Archivo grande fue aceptado (debería rechazarse)
+2025-11-22 23:02:28 - tests.test_contacto - INFO - === Iniciando TC-003: Envío formulario contacto válido ===
+2025-11-22 23:02:28 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:02:29 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:02:31 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 23:02:31 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 23:02:32 - pages.contacto_page - INFO - Completando formulario con: nombre=Carlos Mendez, email=carlos@talentolab.com
+2025-11-22 23:02:32 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:02:32 - pages.contacto_page - INFO - Texto 'Carlos Mendez' ingresado en: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:02:32 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:02:32 - pages.contacto_page - INFO - Texto 'carlos@talentolab.com' ingresado en: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:02:32 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:02:32 - pages.contacto_page - INFO - Texto '¿Cómo es el proceso de selección?' ingresado en: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:02:32 - pages.contacto_page - INFO - Formulario completado exitosamente
+2025-11-22 23:02:33 - pages.contacto_page - INFO - Enviando formulario de contacto
+2025-11-22 23:02:33 - pages.contacto_page - INFO - Elemento encontrado: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:02:33 - pages.contacto_page - INFO - Click realizado en: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:02:35 - tests.test_contacto - INFO - ✓ Formulario enviado - Test ejecutado
+2025-11-22 23:02:35 - tests.test_contacto - WARNING - BUG-003 conocido: Formulario no valida correctamente
+2025-11-22 23:02:41 - tests.test_contacto - INFO - === Test parametrizado con datos: Carlos Mendez ===
+2025-11-22 23:02:41 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:02:41 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:02:42 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 23:02:42 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 23:02:43 - pages.contacto_page - INFO - Completando formulario con: nombre=Carlos Mendez, email=carlos@test.com
+2025-11-22 23:02:43 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:02:43 - pages.contacto_page - INFO - Texto 'Carlos Mendez' ingresado en: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:02:44 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:02:44 - pages.contacto_page - INFO - Texto 'carlos@test.com' ingresado en: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:02:44 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:02:44 - pages.contacto_page - INFO - Texto '¿Cómo es el proceso de selección?' ingresado en: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:02:44 - pages.contacto_page - INFO - Formulario completado exitosamente
+2025-11-22 23:02:45 - pages.contacto_page - INFO - Enviando formulario de contacto
+2025-11-22 23:02:45 - pages.contacto_page - INFO - Elemento encontrado: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:02:45 - pages.contacto_page - INFO - Click realizado en: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:02:46 - tests.test_contacto - INFO - Se esperaba éxito en este caso
+2025-11-22 23:02:46 - tests.test_contacto - INFO - ✓ Test parametrizado ejecutado: Carlos Mendez
+2025-11-22 23:02:51 - tests.test_contacto - INFO - === Test parametrizado con datos: Ana Lopez ===
+2025-11-22 23:02:51 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:02:52 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:02:53 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 23:02:53 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 23:02:54 - pages.contacto_page - INFO - Completando formulario con: nombre=Ana Lopez, email=ana@test.com
+2025-11-22 23:02:54 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:02:54 - pages.contacto_page - INFO - Texto 'Ana Lopez' ingresado en: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:02:54 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:02:54 - pages.contacto_page - INFO - Texto 'ana@test.com' ingresado en: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:02:54 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:02:54 - pages.contacto_page - INFO - Texto 'Necesito información sobre servicios' ingresado en: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:02:54 - pages.contacto_page - INFO - Formulario completado exitosamente
+2025-11-22 23:02:55 - pages.contacto_page - INFO - Enviando formulario de contacto
+2025-11-22 23:02:55 - pages.contacto_page - INFO - Elemento encontrado: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:02:56 - pages.contacto_page - INFO - Click realizado en: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:02:57 - tests.test_contacto - INFO - Se esperaba éxito en este caso
+2025-11-22 23:02:57 - tests.test_contacto - INFO - ✓ Test parametrizado ejecutado: Ana Lopez
+2025-11-22 23:03:02 - tests.test_contacto - INFO - === Test parametrizado con datos:  ===
+2025-11-22 23:03:02 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:03:03 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:03:04 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 23:03:04 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 23:03:05 - pages.contacto_page - INFO - Completando formulario con: nombre=, email=vacio@test.com
+2025-11-22 23:03:05 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:03:05 - pages.contacto_page - INFO - Texto '' ingresado en: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:03:05 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:03:05 - pages.contacto_page - INFO - Texto 'vacio@test.com' ingresado en: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:03:05 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:03:05 - pages.contacto_page - INFO - Texto 'Test campo nombre vacío' ingresado en: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:03:05 - pages.contacto_page - INFO - Formulario completado exitosamente
+2025-11-22 23:03:06 - pages.contacto_page - INFO - Enviando formulario de contacto
+2025-11-22 23:03:06 - pages.contacto_page - INFO - Elemento encontrado: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:03:06 - pages.contacto_page - INFO - Click realizado en: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:03:07 - tests.test_contacto - INFO - Se esperaba error en este caso
+2025-11-22 23:03:07 - tests.test_contacto - INFO - ✓ Test parametrizado ejecutado: 
+2025-11-22 23:03:13 - tests.test_contacto - INFO - === Test parametrizado con datos: Test User ===
+2025-11-22 23:03:13 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:03:13 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:03:14 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 23:03:14 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 23:03:15 - pages.contacto_page - INFO - Completando formulario con: nombre=Test User, email=emailinvalido
+2025-11-22 23:03:15 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:03:15 - pages.contacto_page - INFO - Texto 'Test User' ingresado en: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:03:15 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:03:15 - pages.contacto_page - INFO - Texto 'emailinvalido' ingresado en: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:03:16 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:03:16 - pages.contacto_page - INFO - Texto 'Test email sin formato' ingresado en: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:03:16 - pages.contacto_page - INFO - Formulario completado exitosamente
+2025-11-22 23:03:17 - pages.contacto_page - INFO - Enviando formulario de contacto
+2025-11-22 23:03:17 - pages.contacto_page - INFO - Elemento encontrado: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:03:17 - pages.contacto_page - INFO - Click realizado en: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:03:18 - tests.test_contacto - INFO - Se esperaba error en este caso
+2025-11-22 23:03:18 - tests.test_contacto - INFO - ✓ Test parametrizado ejecutado: Test User
+2025-11-22 23:03:23 - tests.test_contacto - INFO - === Test parametrizado con datos: Pedro Gomez ===
+2025-11-22 23:03:23 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:03:24 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:03:25 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 23:03:25 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 23:03:26 - pages.contacto_page - INFO - Completando formulario con: nombre=Pedro Gomez, email=pedro@test.com
+2025-11-22 23:03:26 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:03:26 - pages.contacto_page - INFO - Texto 'Pedro Gomez' ingresado en: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:03:26 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:03:26 - pages.contacto_page - INFO - Texto 'pedro@test.com' ingresado en: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:03:26 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:03:26 - pages.contacto_page - INFO - Texto 'Consulta sobre reclutamiento IT' ingresado en: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:03:26 - pages.contacto_page - INFO - Formulario completado exitosamente
+2025-11-22 23:03:27 - pages.contacto_page - INFO - Enviando formulario de contacto
+2025-11-22 23:03:27 - pages.contacto_page - INFO - Elemento encontrado: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:03:27 - pages.contacto_page - INFO - Click realizado en: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:03:28 - tests.test_contacto - INFO - Se esperaba éxito en este caso
+2025-11-22 23:03:28 - tests.test_contacto - INFO - ✓ Test parametrizado ejecutado: Pedro Gomez
+2025-11-22 23:03:35 - tests.test_contacto - INFO - === Iniciando TC-004: Formulario campos vacíos (NEGATIVO) ===
+2025-11-22 23:03:35 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:04:15 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:04:17 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 23:04:17 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 23:04:18 - tests.test_contacto - INFO - Intentando enviar formulario sin completar campos
+2025-11-22 23:04:18 - pages.contacto_page - INFO - Campos vacíos: True
+2025-11-22 23:04:18 - tests.test_contacto - INFO - Campos vacíos: True
+2025-11-22 23:04:18 - pages.contacto_page - INFO - Enviando formulario de contacto
+2025-11-22 23:04:18 - pages.contacto_page - INFO - Elemento encontrado: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:04:18 - pages.contacto_page - INFO - Click realizado en: ('xpath', "//button[contains(text(), 'Enviar')]")
+2025-11-22 23:04:20 - tests.test_contacto - WARNING - BUG-003: Formulario no valida campos vacíos
+2025-11-22 23:04:20 - tests.test_contacto - INFO - ✓ Test negativo ejecutado - documenta BUG-003
+2025-11-22 23:04:26 - pages.register_page - INFO - Navegando a: https://talentolab-test.netlify.app/register
+2025-11-22 23:04:26 - pages.register_page - INFO - Completando formulario: nombre=Luciano Automation, email=test_luciano@example.com
+2025-11-22 23:04:26 - pages.register_page - INFO - Elemento encontrado: ('name', 'nombre')
+2025-11-22 23:04:26 - pages.register_page - INFO - Texto 'Luciano Automation' ingresado en: ('name', 'nombre')
+2025-11-22 23:04:26 - pages.register_page - INFO - Elemento encontrado: ('name', 'email')
+2025-11-22 23:04:26 - pages.register_page - INFO - Texto 'test_luciano@example.com' ingresado en: ('name', 'email')
+2025-11-22 23:04:26 - pages.register_page - INFO - Elemento encontrado: ('name', 'contrasena')
+2025-11-22 23:04:26 - pages.register_page - INFO - Texto '123456' ingresado en: ('name', 'contrasena')
+2025-11-22 23:04:28 - pages.register_page - INFO - Elemento encontrado: ('css selector', '.alert-success, .success-message, h2')
+2025-11-22 23:04:28 - pages.register_page - INFO - Texto obtenido de ('css selector', '.alert-success, .success-message, h2'): Registro
+2025-11-22 23:04:28 - pages.register_page - INFO - Mensaje encontrado: Registro
+2025-11-22 23:04:34 - tests.test_responsive - INFO - === Iniciando TC-010: Navegación Mobile ===
+2025-11-22 23:04:34 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:04:34 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:04:37 - pages.home_page - INFO - Elemento encontrado: ('link text', 'Registrate')
+2025-11-22 23:04:37 - pages.home_page - INFO - Página principal verificada correctamente
+2025-11-22 23:04:37 - tests.test_responsive - INFO - ✓ Página carga correctamente en vista móvil
+2025-11-22 23:04:37 - pages.home_page - INFO - Scrolling a sección Servicios
+2025-11-22 23:04:38 - pages.home_page - INFO - Elemento encontrado: ('id', 'servicios')
+2025-11-22 23:04:40 - tests.test_responsive - INFO - ✓ Scroll a servicios funcional
+2025-11-22 23:04:40 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Reclutamiento')]")
+2025-11-22 23:04:40 - pages.servicios_page - INFO - Servicio 'Reclutamiento' encontrado
+2025-11-22 23:04:40 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Headhunting')]")
+2025-11-22 23:04:40 - pages.servicios_page - INFO - Servicio 'Headhunting' encontrado
+2025-11-22 23:04:40 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Evaluación')]")
+2025-11-22 23:04:40 - pages.servicios_page - INFO - Servicio 'Evaluación' encontrado
+2025-11-22 23:04:40 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Consultoría')]")
+2025-11-22 23:04:40 - pages.servicios_page - INFO - Servicio 'Consultoría' encontrado
+2025-11-22 23:04:40 - tests.test_responsive - INFO - Servicios visibles en móvil: 4
+2025-11-22 23:04:42 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 23:04:42 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 23:04:44 - tests.test_responsive - INFO - ✓ Scroll a contacto funcional
+2025-11-22 23:04:44 - tests.test_responsive - INFO - ✓ Navegación móvil completada exitosamente
+2025-11-22 23:04:50 - tests.test_responsive - INFO - === Test: Formulario Contacto en Mobile ===
+2025-11-22 23:04:50 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:04:50 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:04:52 - pages.home_page - INFO - Scrolling a sección Contacto
+2025-11-22 23:04:52 - pages.home_page - INFO - Elemento encontrado: ('id', 'contacto')
+2025-11-22 23:04:54 - pages.contacto_page - INFO - Completando formulario con: nombre=Test Mobile, email=mobile@test.com
+2025-11-22 23:04:54 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:04:54 - pages.contacto_page - INFO - Texto 'Test Mobile' ingresado en: ('css selector', "input[placeholder='Nombre']")
+2025-11-22 23:04:54 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:04:54 - pages.contacto_page - INFO - Texto 'mobile@test.com' ingresado en: ('css selector', "input[placeholder='Email']")
+2025-11-22 23:04:54 - pages.contacto_page - INFO - Elemento encontrado: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:04:54 - pages.contacto_page - INFO - Texto 'Prueba desde dispositivo móvil' ingresado en: ('css selector', "textarea[placeholder='Mensaje'], textarea")
+2025-11-22 23:04:54 - pages.contacto_page - INFO - Formulario completado exitosamente
+2025-11-22 23:04:55 - tests.test_responsive - INFO - ✓ Formulario completado en vista móvil
+2025-11-22 23:05:01 - tests.test_responsive - INFO - === Test: Servicios Responsive Mobile ===
+2025-11-22 23:05:01 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:05:02 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:05:04 - pages.home_page - INFO - Scrolling a sección Servicios
+2025-11-22 23:05:04 - pages.home_page - INFO - Elemento encontrado: ('id', 'servicios')
+2025-11-22 23:05:06 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Reclutamiento')]")
+2025-11-22 23:05:06 - pages.servicios_page - INFO - Servicio 'Reclutamiento' encontrado
+2025-11-22 23:05:06 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Headhunting')]")
+2025-11-22 23:05:06 - pages.servicios_page - INFO - Servicio 'Headhunting' encontrado
+2025-11-22 23:05:06 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Evaluación')]")
+2025-11-22 23:05:06 - pages.servicios_page - INFO - Servicio 'Evaluación' encontrado
+2025-11-22 23:05:06 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Consultoría')]")
+2025-11-22 23:05:06 - pages.servicios_page - INFO - Servicio 'Consultoría' encontrado
+2025-11-22 23:05:06 - tests.test_responsive - INFO - Servicios visibles en móvil: 4
+2025-11-22 23:05:06 - tests.test_responsive - INFO - ✓ Servicios se muestran correctamente en móvil
+2025-11-22 23:05:11 - tests.test_visualizacion - INFO - === Iniciando TC-005: Visualización de testimonios ===
+2025-11-22 23:05:11 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:05:49 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:05:51 - pages.clientes_page - INFO - Elemento encontrado: ('xpath', "//*[contains(text(), 'Ross')]")
+2025-11-22 23:05:51 - pages.clientes_page - INFO - Testimonio de Ross encontrado
+2025-11-22 23:05:51 - pages.clientes_page - INFO - Elemento encontrado: ('xpath', "//*[contains(text(), 'Joey')]")
+2025-11-22 23:05:51 - pages.clientes_page - INFO - Testimonio de Joey encontrado
+2025-11-22 23:05:51 - pages.clientes_page - INFO - Elemento encontrado: ('xpath', "//*[contains(text(), 'Phoebe')]")
+2025-11-22 23:05:51 - pages.clientes_page - INFO - Testimonio de Phoebe encontrado
+2025-11-22 23:05:51 - pages.clientes_page - INFO - Verificación de testimonios: {'Ross': True, 'Joey': True, 'Phoebe': True}
+2025-11-22 23:05:51 - tests.test_visualizacion - INFO - Testimonios encontrados: {'Ross': True, 'Joey': True, 'Phoebe': True}
+2025-11-22 23:05:51 - pages.clientes_page - INFO - Se encontraron 3 testimonios
+2025-11-22 23:05:51 - tests.test_visualizacion - INFO - ✓ Test exitoso: 3 testimonios verificados
+2025-11-22 23:05:56 - tests.test_visualizacion - INFO - === Iniciando TC-006: Visualización de servicios ===
+2025-11-22 23:05:56 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:05:57 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:05:57 - pages.home_page - INFO - Scrolling a sección Servicios
+2025-11-22 23:05:57 - pages.home_page - INFO - Elemento encontrado: ('id', 'servicios')
+2025-11-22 23:05:59 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Reclutamiento')]")
+2025-11-22 23:05:59 - pages.servicios_page - INFO - Servicio 'Reclutamiento' encontrado
+2025-11-22 23:05:59 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Headhunting')]")
+2025-11-22 23:05:59 - pages.servicios_page - INFO - Servicio 'Headhunting' encontrado
+2025-11-22 23:05:59 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Evaluación')]")
+2025-11-22 23:05:59 - pages.servicios_page - INFO - Servicio 'Evaluación' encontrado
+2025-11-22 23:05:59 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Consultoría')]")
+2025-11-22 23:05:59 - pages.servicios_page - INFO - Servicio 'Consultoría' encontrado
+2025-11-22 23:05:59 - tests.test_visualizacion - INFO - Servicios disponibles: ['Reclutamiento', 'Headhunting', 'Evaluación', 'Consultoría']
+2025-11-22 23:05:59 - tests.test_visualizacion - INFO - ✓ Test exitoso: Todos los servicios visualizados correctamente
+2025-11-22 23:06:05 - tests.test_visualizacion - INFO - === Iniciando TC-007: Información para candidatos ===
+2025-11-22 23:06:05 - pages.home_page - INFO - Navegando a: https://talentolab-test.netlify.app
+2025-11-22 23:06:05 - pages.home_page - INFO - Página principal cargada exitosamente
+2025-11-22 23:06:07 - pages.home_page - INFO - Elemento encontrado: ('link text', 'Registrate')
+2025-11-22 23:06:07 - pages.home_page - INFO - Página principal verificada correctamente
+2025-11-22 23:06:07 - pages.home_page - INFO - Scrolling a sección Servicios
+2025-11-22 23:06:07 - pages.home_page - INFO - Elemento encontrado: ('id', 'servicios')
+2025-11-22 23:06:08 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Reclutamiento')]")
+2025-11-22 23:06:08 - pages.servicios_page - INFO - Servicio 'Reclutamiento' encontrado
+2025-11-22 23:06:08 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Headhunting')]")
+2025-11-22 23:06:08 - pages.servicios_page - INFO - Servicio 'Headhunting' encontrado
+2025-11-22 23:06:08 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Evaluación')]")
+2025-11-22 23:06:08 - pages.servicios_page - INFO - Servicio 'Evaluación' encontrado
+2025-11-22 23:06:08 - pages.servicios_page - INFO - Elemento encontrado: ('xpath', "//*[@id='servicios']//*[contains(text(), 'Consultoría')]")
+2025-11-22 23:06:08 - pages.servicios_page - INFO - Servicio 'Consultoría' encontrado
+2025-11-22 23:06:08 - tests.test_visualizacion - INFO - ✓ Test exitoso: Información accesible y bien presentada
