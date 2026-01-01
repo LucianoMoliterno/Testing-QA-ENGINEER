@@ -1,0 +1,51 @@
+{
+  "productos_a_comprar": [
+    {
+      "id": 0,
+      "nombre": "Sauce Labs Backpack",
+      "precio": "$29.99",
+      "descripcion": "Primera compra individual"
+    },
+    {
+      "id": 2,
+      "nombre": "Sauce Labs Bolt T-Shirt",
+      "precio": "$15.99",
+      "descripcion": "Segunda compra individual"
+    }
+  ],
+  "compras_multiples": [
+    {
+      "productos_indices": [0, 1, 2],
+      "cantidad_esperada": 3,
+      "descripcion": "Compra de 3 productos"
+    },
+    {
+      "productos_indices": [0, 3],
+      "cantidad_esperada": 2,
+      "descripcion": "Compra de 2 productos específicos"
+    },
+    {
+      "productos_indices": [1, 2, 4, 5],
+      "cantidad_esperada": 4,
+      "descripcion": "Compra de 4 productos"
+    }
+  ],
+  "escenarios_carrito": [
+    {
+      "accion": "agregar_y_verificar",
+      "producto_index": 0,
+      "descripcion": "Agregar primer producto y verificar contador"
+    },
+    {
+      "accion": "agregar_y_remover",
+      "producto_index": 1,
+      "descripcion": "Agregar y remover producto del carrito"
+    },
+    {
+      "accion": "verificar_contenido",
+      "producto_index": 2,
+      "descripcion": "Verificar que el producto correcto está en el carrito"
+    }
+  ]
+}
+

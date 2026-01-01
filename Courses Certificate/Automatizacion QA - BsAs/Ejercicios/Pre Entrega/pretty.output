@@ -1,0 +1,116 @@
+@ui @regression
+Característica: Carrito de Compras en SauceDemo # features/cart.feature:6
+  Como usuario autenticado
+  Quiero poder agregar productos al carrito
+  Para posteriormente realizar una compra
+  Antecedentes:   # features/cart.feature:11
+
+  @smoke
+  Escenario: Agregar un producto al carrito                                                # features/cart.feature:15
+    Dado que el usuario está autenticado en SauceDemo con "standard_user" y "secret_sauce" # features/steps/cart_steps.py:16
+    Cuando el usuario agrega "Sauce Labs Backpack" al carrito                              # features/steps/cart_steps.py:35
+    Entonces el contador del carrito debe mostrar "1"                                      # features/steps/cart_steps.py:76
+    Y el producto "Sauce Labs Backpack" debe estar en el carrito                           # features/steps/cart_steps.py:93
+
+  Escenario: Agregar múltiples productos al carrito                                        # features/cart.feature:20
+    Dado que el usuario está autenticado en SauceDemo con "standard_user" y "secret_sauce" # features/steps/cart_steps.py:16
+    Cuando el usuario agrega "Sauce Labs Backpack" al carrito                              # features/steps/cart_steps.py:35
+    Y el usuario agrega "Sauce Labs Bike Light" al carrito                                 # features/steps/cart_steps.py:35
+    Y el usuario agrega "Sauce Labs Bolt T-Shirt" al carrito                               # features/steps/cart_steps.py:35
+    Entonces el contador del carrito debe mostrar "3"                                      # features/steps/cart_steps.py:76
+    Y el carrito debe contener 3 productos                                                 # features/steps/cart_steps.py:118
+
+  Escenario: Eliminar producto del carrito                                                 # features/cart.feature:27
+    Dado que el usuario está autenticado en SauceDemo con "standard_user" y "secret_sauce" # features/steps/cart_steps.py:16
+    Cuando el usuario agrega "Sauce Labs Backpack" al carrito                              # features/steps/cart_steps.py:35
+    Y el usuario accede al carrito                                                         # features/steps/cart_steps.py:43
+    Y el usuario elimina "Sauce Labs Backpack" del carrito                                 # features/steps/cart_steps.py:51
+    Entonces el contador del carrito debe mostrar "0"                                      # features/steps/cart_steps.py:76
+    Y el carrito debe estar vacío                                                          # features/steps/cart_steps.py:131
+
+  Esquema del escenario: Agregar diferentes productos -- @1.1                              # features/cart.feature:41
+    Dado que el usuario está autenticado en SauceDemo con "standard_user" y "secret_sauce" # features/steps/cart_steps.py:16
+    Cuando el usuario agrega "Sauce Labs Backpack" al carrito                              # features/steps/cart_steps.py:35
+    Entonces el contador del carrito debe mostrar "1"                                      # features/steps/cart_steps.py:76
+    Y el producto "Sauce Labs Backpack" debe estar visible en el carrito                   # features/steps/cart_steps.py:106
+
+  Esquema del escenario: Agregar diferentes productos -- @1.2                              # features/cart.feature:42
+    Dado que el usuario está autenticado en SauceDemo con "standard_user" y "secret_sauce" # features/steps/cart_steps.py:16
+    Cuando el usuario agrega "Sauce Labs Bike Light" al carrito                            # features/steps/cart_steps.py:35
+    Entonces el contador del carrito debe mostrar "1"                                      # features/steps/cart_steps.py:76
+    Y el producto "Sauce Labs Bike Light" debe estar visible en el carrito                 # features/steps/cart_steps.py:106
+
+  Esquema del escenario: Agregar diferentes productos -- @1.3                              # features/cart.feature:43
+    Dado que el usuario está autenticado en SauceDemo con "standard_user" y "secret_sauce" # features/steps/cart_steps.py:16
+    Cuando el usuario agrega "Sauce Labs Bolt T-Shirt" al carrito                          # features/steps/cart_steps.py:35
+    Entonces el contador del carrito debe mostrar "1"                                      # features/steps/cart_steps.py:76
+    Y el producto "Sauce Labs Bolt T-Shirt" debe estar visible en el carrito               # features/steps/cart_steps.py:106
+
+  Esquema del escenario: Agregar diferentes productos -- @1.4                              # features/cart.feature:44
+    Dado que el usuario está autenticado en SauceDemo con "standard_user" y "secret_sauce" # features/steps/cart_steps.py:16
+    Cuando el usuario agrega "Sauce Labs Fleece Jacket" al carrito                         # features/steps/cart_steps.py:35
+    Entonces el contador del carrito debe mostrar "1"                                      # features/steps/cart_steps.py:76
+    Y el producto "Sauce Labs Fleece Jacket" debe estar visible en el carrito              # features/steps/cart_steps.py:106
+
+  Escenario: Verificar persistencia del carrito                                            # features/cart.feature:46
+    Dado que el usuario está autenticado en SauceDemo con "standard_user" y "secret_sauce" # features/steps/cart_steps.py:16
+    Cuando el usuario agrega "Sauce Labs Backpack" al carrito                              # features/steps/cart_steps.py:35
+    Y el usuario navega a otra página del sitio                                            # features/steps/cart_steps.py:59
+    Y el usuario regresa a la página de inventario                                         # features/steps/cart_steps.py:68
+    Entonces el contador del carrito debe seguir mostrando "1"                             # features/steps/cart_steps.py:142
+
+@ui
+Característica: Login en SauceDemo # features/login.feature:6
+  Como usuario del sistema
+  Quiero poder autenticarme con mis credenciales
+  Para acceder a la tienda online
+  Antecedentes:   # features/login.feature:11
+
+  @smoke
+  Escenario: Login exitoso con credenciales válidas                   # features/login.feature:15
+    Dado que el usuario está en la página de login de SauceDemo       # features/steps/login_steps.py:15
+    Cuando el usuario ingresa el nombre de usuario "standard_user"    # features/steps/login_steps.py:24
+    Y el usuario ingresa la contraseña "secret_sauce"                 # features/steps/login_steps.py:36
+    Y el usuario hace clic en el botón de login                       # features/steps/login_steps.py:48
+    Entonces el usuario debe ser redirigido a la página de inventario # features/steps/login_steps.py:73
+    Y el usuario debe ver el título "Products" en la página           # features/steps/login_steps.py:82
+
+  Esquema del escenario: Login con credenciales inválidas -- @1.1                                                                # features/login.feature:30
+    Dado que el usuario está en la página de login de SauceDemo                                                                  # features/steps/login_steps.py:15
+    Cuando el usuario ingresa el nombre de usuario "invalid_user"                                                                # features/steps/login_steps.py:24
+    Y el usuario ingresa la contraseña "secret_sauce"                                                                            # features/steps/login_steps.py:36
+    Y el usuario hace clic en el botón de login                                                                                  # features/steps/login_steps.py:48
+    Entonces el usuario debe ver el mensaje de error "Epic sadface: Username and password do not match any user in this service" # features/steps/login_steps.py:91
+
+  Esquema del escenario: Login con credenciales inválidas -- @1.2                                                                # features/login.feature:31
+    Dado que el usuario está en la página de login de SauceDemo                                                                  # features/steps/login_steps.py:15
+    Cuando el usuario ingresa el nombre de usuario "standard_user"                                                               # features/steps/login_steps.py:24
+    Y el usuario ingresa la contraseña "wrong_password"                                                                          # features/steps/login_steps.py:36
+    Y el usuario hace clic en el botón de login                                                                                  # features/steps/login_steps.py:48
+    Entonces el usuario debe ver el mensaje de error "Epic sadface: Username and password do not match any user in this service" # features/steps/login_steps.py:91
+
+  Esquema del escenario: Login con credenciales inválidas -- @1.3                         # features/login.feature:32
+    Dado que el usuario está en la página de login de SauceDemo                           # features/steps/login_steps.py:15
+    Cuando el usuario ingresa el nombre de usuario ""                                     # features/steps/login_steps.py:48
+    Y el usuario ingresa la contraseña ""Epic sadface: Username is required                                                 # features/steps/login_steps.py:91
+    Y el usuario hace clic en el botón de login                                           # None
+    Entonces el usuario debe ver el mensaje de error "Epic sadface: Username is required" # None
+
+  Escenario: Login con usuario bloqueado                                                                   # features/login.feature:34
+    Dado que el usuario está en la página de login de SauceDemo                                            # features/steps/login_steps.py:15
+    Cuando el usuario ingresa el nombre de usuario "locked_out_user"                                       # features/steps/login_steps.py:24
+    Y el usuario ingresa la contraseña "secret_sauce"                                                      # features/steps/login_steps.py:36
+    Y el usuario hace clic en el botón de login                                                            # features/steps/login_steps.py:48
+    Entonces el usuario debe ver el mensaje de error "Epic sadface: Sorry, this user has been locked out." # features/steps/login_steps.py:91
+
+  Escenario: Login con campos vacíos                                                      # features/login.feature:40
+    Dado que el usuario está en la página de login de SauceDemo                           # features/steps/login_steps.py:15
+    Cuando el usuario hace clic en el botón de login sin ingresar credenciales            # features/steps/login_steps.py:57
+    Entonces el usuario debe ver el mensaje de error "Epic sadface: Username is required" # features/steps/login_steps.py:91
+
+  Escenario: Login con solo usuario sin contraseña                                        # features/login.feature:44
+    Dado que el usuario está en la página de login de SauceDemo                           # features/steps/login_steps.py:15
+    Cuando el usuario ingresa el nombre de usuario "standard_user"                        # features/steps/login_steps.py:24
+    Y el usuario hace clic en el botón de login sin ingresar contraseña                   # features/steps/login_steps.py:65
+    Entonces el usuario debe ver el mensaje de error "Epic sadface: Password is required" # features/steps/login_steps.py:91
+
