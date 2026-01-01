@@ -3,10 +3,10 @@
 Automatización E2E del flujo de compra con tarjeta de crédito para el sitio **Remeras Shop**, aplicando metodología BDD.
 
 ## 📋 Descripción del Caso (TC-E2E-001)
-[cite_start]El script automatiza la selección de dos productos, el uso de un cupón de descuento y el checkout completo con tarjeta de crédito[cite: 1686, 1706, 1717].
+El script automatiza la selección de dos productos, el uso de un cupón de descuento y el checkout completo con tarjeta de crédito
 
-* [cite_start]**Sitio Web:** [https://remeras-shop.vercel.app/](https://remeras-shop.vercel.app/) [cite: 1689]
-* [cite_start]**Validaciones:** Mensaje de éxito, formato de número de orden (`ORD-...`), URL final (`/confirmation`) y botón de retorno visible [cite: 1731-1735].
+* **Sitio Web:** [https://remeras-shop.vercel.app/](https://remeras-shop.vercel.app/) 
+* **Validaciones:** Mensaje de éxito, formato de número de orden (`ORD-...`), URL final (`/confirmation`) y botón de retorno visible 
 
 ## 🛠️ Tech Stack
 * **Python**
